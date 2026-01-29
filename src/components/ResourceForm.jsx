@@ -3,6 +3,8 @@ import '../css/resourceForm.css';
 import { db } from '../config/firebase';
 import { collection, addDoc } from "firebase/firestore";
 import { Timestamp } from "firebase/firestore";
+import { auth } from "../config/firebase";
+
 
 // Validation helper functions
 const validateUrl = (url) => {
