@@ -350,3 +350,44 @@
 .dark .signup-divider::after {
   background-color: var(--border-color);
 }
+
+.google-signup {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+/* Google button hover state */
+.google-signup:hover {
+  background-color: white;
+  border-color: #475569;
+}
+
+/* Google logo sizing */
+.google-signup img {
+  width: 20px;
+  height: 20px;
+}
+
+.dark .google-signup {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  border: 2px solid #334155;
+}
+
+.dark .google-signup:hover {
+  background-color: #1e293b;
+  border-color: #475569;
+}
