@@ -2,7 +2,7 @@ const events = [
   {
     id: 1,
     name: 'Kaleidoscope Festival',
-    date: 'April 4, 2025',
+    date: 'April 4, 2026',
     time: '3:00 PM - 7:00 PM',
     location: 'Old Town Coppell Square',
     address: 'Old Town Coppell Square',
@@ -15,7 +15,7 @@ const events = [
   {
     id: 2,
     name: 'Fourth of July Celebration',
-    date: 'July 4, 2025',
+    date: 'July 4, 2026',
     time: '6:00 PM - 10:00 PM',
     location: 'Andrew Brown Park East',
     address: '260 Parkway Blvd',
@@ -28,7 +28,7 @@ const events = [
   {
     id: 3,
     name: 'Holiday Tree Lighting',
-    date: 'December 5, 2025',
+    date: 'December 5, 2026',
     time: '6:00 PM',
     location: 'Andrew Brown Park East',
     address: 'Andrew Brown Park East, 260 Parkway Blvd',
