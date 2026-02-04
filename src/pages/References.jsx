@@ -70,7 +70,7 @@ export default function References() {
         <div className="content-wrapper">
 
           <div className = "team-number">
-            <h2>Team number</h2>
+            <h2>Team Number</h2>
             <h3>2003-1</h3>
           </div>
           
