@@ -68,6 +68,11 @@ export default function References() {
       
       <div className="references-content">
         <div className="content-wrapper">
+
+          <div className = "team-number">
+            <h2>Team number</h2>
+            <h3>2003-1</h3>
+          </div>
           
           <div style={{ marginBottom: '48px' }}>
             <h2 style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
