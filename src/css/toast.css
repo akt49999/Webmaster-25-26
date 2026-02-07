@@ -16,13 +16,14 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 14px 16px;
+  padding: 18px 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   animation: slideInRight 0.3s ease-out;
   pointer-events: auto;
-  min-height: 48px;
+  min-height: 60px;
   max-width: 100%;
+  font-size: 15px;
 }
 
 .toast-icon {
@@ -30,13 +31,15 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  min-width: 24px;
 }
 
 .toast-message {
   flex: 1;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   word-break: break-word;
+  line-height: 1.5;
 }
 
 .toast-close {

@@ -5,13 +5,23 @@
  */
 
 import PropTypes from 'prop-types';
+import '../css/pageHero.css';
 
 const PageHero = ({ title, subtitle, className = '' }) => {
   return (
     <div className={`page-hero ${className}`}>
+      {/* Animated background layers */}
+      <div className="page-hero-bg">
+        <div className="page-bg-layer page-bg-layer-1"></div>
+        <div className="page-bg-layer page-bg-layer-2"></div>
+        <div className="page-accent-shape accent-1"></div>
+        <div className="page-accent-shape accent-2"></div>
+      </div>
+
       <div className="page-hero-content">
-        <h1>{title}</h1>
-        {subtitle && <p>{subtitle}</p>}
+        <h1 className="page-hero-title">{title}</h1>
+        {subtitle && <p className="page-hero-subtitle">{subtitle}</p>}
+        <div className="page-hero-accent"></div>
       </div>
     </div>
   );

@@ -4,12 +4,14 @@ import PopularCategories from '../components/PopularCategories';
 import EventsStrip from '../components/EventsStrip';
 import HighlightSpotlight from '../components/HighlightSpotlight';
 import ResourceForm from '../components/ResourceForm';
+import GuestInfoToast from '../components/GuestInfoToast';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Home() {
   useScrollAnimation();
   return (
     <>
+      <GuestInfoToast />
       <Hero />
       <PopularCategories />
       <EventsStrip />

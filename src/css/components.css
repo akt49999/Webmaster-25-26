@@ -3,53 +3,7 @@
  * Reusable styles for common components across all pages
  */
 
-/* ============================================
-   PAGE HERO COMPONENT
-   ============================================ */
-
-.page-hero {
-  background: linear-gradient(to bottom right, #ea580c, #ec4899, #9333ea);
-  padding: 4rem 1rem;
-  margin-top: 0;
-}
-
-.page-hero-content {
-  max-width: 56rem;
-  margin: 0 auto;
-  padding: 0 1rem;
-  text-align: center;
-}
-
-.page-hero h1 {
-  color: white;
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.page-hero p {
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 1.125rem;
-  max-width: 42rem;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .page-hero h1 {
-    font-size: 1.875rem;
-  }
-
-  .page-hero p {
-    font-size: 1rem;
-  }
-}
-
-/* Dark mode */
-.dark .page-hero {
-  background: linear-gradient(to bottom right, #1a2a4e, #16213e, #0f3460) !important;
-}
+/* PAGE HERO COMPONENT STYLES MOVED TO pageHero.css */
 
 /* ============================================
    SEARCH BAR COMPONENT
