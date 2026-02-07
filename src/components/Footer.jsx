@@ -6,17 +6,6 @@ import '../css/footer.css';
 export default function Footer() {
   const navigate = useNavigate();
 
-  const handleSubmitResourceClick = () => {
-    navigate('/');
-    // Scroll to submit resource form after navigation
-    setTimeout(() => {
-      const submitSection = document.getElementById('submit-resource');
-      if (submitSection) {
-        submitSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
-  };
-
   return (
     <footer id="contact" className="footer-root">
       <div className="footer-container">

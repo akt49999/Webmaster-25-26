@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background: var(--bg-primary, #f7f5ef);
     color: var(--text-primary, #333);
     -webkit-font-smoothing: antialiased;
@@ -27,78 +27,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Typography System - Responsive Headings */
-h1 {
-    font-size: clamp(28px, 5vw, 48px);
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0;
-    color: var(--text-primary, #1f2937);
-}
-
-h2 {
-    font-size: clamp(24px, 4vw, 36px);
-    font-weight: 700;
-    line-height: 1.3;
-    margin: 0;
-    color: var(--text-primary, #1f2937);
-}
-
-h3 {
-    font-size: clamp(20px, 3.5vw, 28px);
-    font-weight: 700;
-    line-height: 1.4;
-    margin: 0;
-    color: var(--text-primary, #1f2937);
-}
-
-h4 {
-    font-size: clamp(18px, 3vw, 24px);
-    font-weight: 600;
-    line-height: 1.4;
-    margin: 0;
-    color: var(--text-primary, #1f2937);
-}
-
-h5 {
-    font-size: clamp(16px, 2.5vw, 20px);
-    font-weight: 600;
-    line-height: 1.5;
-    margin: 0;
-    color: var(--text-primary, #1f2937);
-}
-
-h6 {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.5;
-    margin: 0;
-    color: var(--text-primary, #1f2937);
-}
-
-/* Paragraph Styles */
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--text-secondary, #4b5563);
-}
-
-.text-lg {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.text-xl {
-    font-size: 20px;
-    line-height: 1.6;
-}
-
-.text-sm {
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.text-xs {
-    font-size: 12px;
-    line-height: 1.5;
+/* Typography styles are now in typography.css */
+/* Keeping minimal heading reference for specificity */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-family: 'Outfit', system-ui, -apple-system, sans-serif;
 }

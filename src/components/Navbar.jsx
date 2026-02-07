@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, LogIn, Moon, Sun, LogOut, Settings, Bookmark, Calendar, Shield } from 'lucide-react';
 import { useDarkMode } from '../context/DarkModeContext';
 import { useAuth } from '../context/AuthContext';
@@ -27,7 +27,6 @@ export default function Navbar({ onLoginClick = () => {} }) {
   const userMenuRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const location = useLocation();
-  const navigate = useNavigate();
   const { isDarkMode, toggleDarkMode } = useDarkMode();
   const { user, logout, isAuthenticated } = useAuth();
 
