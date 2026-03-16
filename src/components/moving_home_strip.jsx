@@ -8,6 +8,9 @@ export default function MovingHomeStrip() {
     "features resources 3",
     "features resources 4",
     "features resources 5",
+    "features resources 6",
+    "features resources 7",
+    "features resources 8",
   ];
 
   return (
