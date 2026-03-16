@@ -2,19 +2,31 @@
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
-  background: #111;
-  color: white;
+  border: 1px solid black;
   padding: 10px 0;
 }
 
 .ticker-track {
-  display: inline-flex;
-  animation: ticker-scroll 10s linear infinite;
+  display: flex;
+  animation: ticker-scroll 12s linear infinite;
+  will-change: transform;
+}
+
+.ticker-set {
+  display: flex;
+  flex-shrink: 0;
 }
 
 .ticker-item {
   margin-right: 80px;
   font-weight: 500;
+  flex-shrink: 0;
+}
+
+.dark .ticker {
+  background: #111;
+  border: 1px solid white;
+  color: white;
 }
 
 @keyframes ticker-scroll {
@@ -22,6 +34,6 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-30%);
+    transform: translateX(calc(-1 * var(--single-set-width, 50%)));
   }
 }

@@ -448,13 +448,12 @@
 
 .stat-card2 {
   flex: 1 1 200px;
-  background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   text-align: center;
   padding: 1.5rem;
   transition: transform 0.2s ease;
-  border-color: black;
+  border: var(--bg-secondary) solid;
   border-width: 2px
 }
 
