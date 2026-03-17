@@ -30,7 +30,6 @@
 
 .ticker-item:hover{
   transform: translateY(-3px) scale(1.05);
-  color: black;
 }
 
 
