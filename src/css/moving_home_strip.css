@@ -2,15 +2,36 @@
   background: "white";
   padding: 10px;
   border: 1px solid black;
+  
 }
 
 .ticker-item{
   display: inline-block;
-  margin-right: 200px;
+  margin-right: 160px;
   font-size: 20px;
+  font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.ticker-item:after{
+  content: "•";
+  margin-left: 40px;
+
+  opacity: 0.5;
 }
 
 .dark .ticker{
   background: "black";
   border: 1px solid white;
 }
+
+.dark .ticker-item{
+  color: #ddd;
+}
+
+.ticker-item:hover{
+  transform: translateY(-3px) scale(1.05);
+  color: black;
+}
+
+
+
