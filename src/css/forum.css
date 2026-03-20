@@ -16,7 +16,7 @@
 }
 
 .dark .forum-stats-section {
-  background: linear-gradient(135deg, #1a2a4e 0%, #16213e 100%);
+  background: #1a1a2a;
 }
 
 .forum-stats-grid {
@@ -297,7 +297,7 @@
 }
 
 .forum-search:focus-within {
-  border-color: #ea580c;
+  border-color: #7fc9a8;
 }
 
 .dark .forum-search {
@@ -419,22 +419,22 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(251, 146, 60, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(127, 201, 168, 0.1) 0%, rgba(127, 201, 168, 0.1) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-orange, #fb923c);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 .forum-empty-state h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
   margin: 0;
 }
 
 .forum-empty-state p {
-  color: var(--text-secondary, #6b7280);
+  color: var(--text-secondary, #555555);
   font-size: 1rem;
   margin: 0;
   max-width: 400px;
@@ -682,7 +682,7 @@
 }
 
 .dark .forum-stat-btn:hover {
-  background: rgba(255, 107, 74, 0.15);
+  background: rgba(129, 199, 132, 0.15);
 }
 
 .forum-stat-btn.liked {
@@ -715,7 +715,7 @@
 }
 
 .dark .forum-action-btn:hover {
-  background: rgba(255, 107, 74, 0.15);
+  background: rgba(129, 199, 132, 0.15);
 }
 
 .dark .forum-action-btn.bookmarked {
@@ -855,7 +855,7 @@
 .forum-poll-label {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #ea580c;
+  color: #7fc9a8;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -900,7 +900,7 @@
 }
 
 .forum-poll-option:hover {
-  border-color: #ea580c;
+  border-color: #7fc9a8;
 }
 
 .dark .forum-poll-option {
@@ -908,12 +908,12 @@
 }
 
 .dark .forum-poll-option:hover {
-  border-color: #ff8c42;
+  border-color: #81c784;
 }
 
 .forum-poll-option.selected {
-  border-color: #ea580c;
-  background: rgba(234, 88, 12, 0.1);
+  border-color: #7fc9a8;
+  background: rgba(127, 201, 168, 0.1);
 }
 
 .forum-poll-option.voted {
@@ -929,8 +929,8 @@
 }
 
 .dark .forum-poll-option.selected {
-  border-color: #ff8c42;
-  background: rgba(255, 140, 66, 0.15);
+  border-color: #81c784;
+  background: rgba(129, 199, 132, 0.15);
 }
 
 .dark .forum-poll-option.voted:not(.selected):hover {
@@ -942,13 +942,13 @@
   top: 0;
   left: 0;
   height: 100%;
-  background: rgba(234, 88, 12, 0.1);
+  background: rgba(127, 201, 168, 0.1);
   border-radius: 10px;
   transition: width 0.5s ease;
 }
 
 .dark .forum-poll-progress {
-  background: rgba(255, 140, 66, 0.15);
+  background: rgba(129, 199, 132, 0.15);
 }
 
 .forum-poll-option-content {
@@ -985,11 +985,11 @@
 
 .forum-poll-percentage {
   font-weight: 700;
-  color: #ea580c;
+  color: #7fc9a8;
 }
 
 .dark .forum-poll-percentage {
-  color: #ff8c42;
+  color: #81c784;
 }
 
 .forum-poll-total {
@@ -1012,7 +1012,7 @@
 }
 
 .dark .forum-cta-section {
-  background: linear-gradient(135deg, #1a2a4e 0%, #0f172a 100%);
+  background: #161829;
 }
 
 .forum-cta-content {

@@ -1,12 +1,12 @@
 .footer-root {
-  background: var(--bg-secondary, linear-gradient(135deg,#0f1724 0%, #111827 100%));
-  color: var(--text-secondary, #d1d5db);
-  border-top: 1px solid var(--border-color, #e5e7eb);
+  background: var(--bg-secondary, #f0f0f0);
+  color: var(--text-secondary, #555555);
+  border-top: 1px solid var(--border-color, #d0d0d0);
 }
 
 .dark .footer-root {
-  border-top: 1px solid var(--border-color, #475569);
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-top: 1px solid var(--border-color, #404040);
+  background: #1e1e1e;
 }
 
 /* Container similar to Tailwind max-w-7xl and padding */
@@ -51,7 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg,#fb923c 0%, #ec4899 100%);
+  background: #7fc9a8;
 }
 
 .logo-letter {
@@ -66,7 +66,7 @@
 
 .footer-root p,
 .footer-root li {
-  color: var(--text-secondary, #9ca3af);
+  color: var(--text-secondary, #888888);
   line-height: 1.6;
 }
 
@@ -92,13 +92,13 @@
 }
 
 .contact-icon {
-  color: #fb923c;
+  color: #7fc9a8;
   margin-top: 4px;
   flex-shrink: 0;
 }
 
 .contact-text {
-  color: #9ca3af;
+  color: #555555;
 }
 
 .social-row {
@@ -114,13 +114,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #1f2937;
-  color: #d1d5db;
+  background: #f0f0f0;
+  color: #555555;
   transition: background-color 180ms ease, color 180ms ease;
 }
 
 .social-btn:hover {
-  background: #fb923c;
+  background: #7fc9a8;
   color: white;
 }
 
@@ -148,7 +148,7 @@
 }
 
 .copyright, .credit {
-  color: #94a3b8;
+  color: #888888;
   font-size: 0.875rem;
 }
 
@@ -159,7 +159,7 @@
 }
 
 .footer-description {
-  color: var(--text-secondary, #9ca3af);
+  color: var(--text-secondary, #555555);
   line-height: 1.6;
 }
 
@@ -174,14 +174,14 @@
 }
 
 .footer-link {
-  color: var(--text-secondary, #9ca3af);
+  color: var(--text-secondary, #555555);
   text-decoration: none;
   transition: color 0.2s ease;
   font-size: 0.9375rem;
 }
 
 .footer-link:hover {
-  color: var(--accent-orange, #fb923c);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 .footer-link-btn {
@@ -204,22 +204,22 @@
 }
 
 .footer-link.footer-link-btn {
-  color: var(--text-secondary, #9ca3af);
+  color: var(--text-secondary, #555555);
   transition: color 0.2s ease;
 }
 
 .footer-link.footer-link-btn:hover {
-  color: var(--accent-orange, #fb923c);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 /* Links */
 #contact a, .footer-root a {
-  color: #9ca3af;
+  color: #555555;
   text-decoration: none;
 }
 
 #contact a:hover, .footer-root a:hover {
-  color: #fb923c;
+  color: #7fc9a8;
 }
 
 /* Very small screens */

@@ -17,7 +17,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.2s ease;
@@ -137,52 +137,52 @@
 
 /* Dark Mode */
 .dark .saved-items-page {
-  background-color: #0f172a;
-  background: #0f172a;
+  background-color: #121212;
+  background: #121212;
 }
 
 .dark .saved-items-header {
-  border-bottom-color: #475569;
+  border-bottom-color: #404040;
 }
 
 .dark .header-content h1 {
   color: white;
   -webkit-text-fill-color: unset;
-  background: linear-gradient(135deg, #ff6b4a, #ff8c42);
+  background: #81c784;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .dark .header-content p {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .dark .empty-state {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .dark .empty-state h2 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .dark .empty-state svg {
   opacity: 0.7;
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .dark .cta-button {
-  background: linear-gradient(135deg, #ff6b4a, #ff8c42);
+  background: #81c784;
   color: white;
 }
 
 .dark .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(255, 107, 74, 0.3);
+  box-shadow: 0 10px 20px rgba(129, 199, 132, 0.3);
 }
 
 .dark .back-button {
-  color: #ff8c42;
+  color: #81c784;
 }
 
 .dark .back-button:hover {

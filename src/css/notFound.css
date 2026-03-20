@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, rgba(234, 88, 12, 0.05), rgba(236, 72, 153, 0.05));
+  background: linear-gradient(135deg, rgba(127, 201, 168, 0.05), rgba(127, 201, 168, 0.05));
 }
 
 .not-found-content {
@@ -22,7 +22,7 @@
 }
 
 .not-found-icon svg {
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
   animation: bounce 2s ease-in-out infinite;
 }
 
@@ -38,37 +38,37 @@
 .not-found-title {
   font-size: 120px;
   font-weight: 900;
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
   margin: 0;
   line-height: 1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .dark .not-found-title {
-  color: #ff8c42;
+  color: #81c784;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .not-found-subtitle {
   font-size: 32px;
   font-weight: 700;
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
   margin: 20px 0 0 0;
 }
 
 .dark .not-found-subtitle {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .not-found-description {
   font-size: 16px;
-  color: var(--text-secondary, #4b5563);
+  color: var(--text-secondary, #555555);
   margin: 16px 0 40px 0;
   line-height: 1.6;
 }
 
 .dark .not-found-description {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 /* Action Buttons */
@@ -97,64 +97,64 @@
 }
 
 .not-found-btn.primary {
-  background: linear-gradient(135deg, #ea580c 0%, #ec4899 100%);
+  background: #7fc9a8;
   color: white;
-  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+  box-shadow: 0 4px 12px rgba(127, 201, 168, 0.3);
 }
 
 .not-found-btn.primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(234, 88, 12, 0.4);
+  box-shadow: 0 6px 16px rgba(127, 201, 168, 0.4);
 }
 
 .not-found-btn.secondary {
-  background: var(--bg-secondary, #f9f9f7);
-  color: var(--text-primary, #1f2937);
+  background: var(--bg-secondary, #f0f0f0);
+  color: var(--text-primary, #2e7d32);
   border: 2px solid var(--border-color, #e5e7eb);
 }
 
 .not-found-btn.secondary:hover {
-  background: var(--bg-tertiary, #f3f3f1);
-  border-color: var(--accent-orange, #ea580c);
-  color: var(--accent-orange, #ea580c);
+  background: var(--bg-tertiary, #f0f0f0);
+  border-color: var(--accent-orange, #7fc9a8);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 .dark .not-found-btn.secondary {
-  background: #1e293b;
-  border-color: #334155;
+  background: #1e1e1e;
+  border-color: #1e1e1e;
   color: #e2e8f0;
 }
 
 .dark .not-found-btn.secondary:hover {
-  background: #334155;
-  border-color: #ff8c42;
-  color: #ff8c42;
+  background: #1e1e1e;
+  border-color: #81c784;
+  color: #81c784;
 }
 
 /* Suggestions */
 .not-found-suggestions {
   padding: 30px;
-  background: var(--bg-secondary, #f9f9f7);
+  background: var(--bg-secondary, #f0f0f0);
   border-radius: 12px;
   border: 1px solid var(--border-color, #e5e7eb);
 }
 
 .dark .not-found-suggestions {
-  background: #1e293b;
-  border-color: #334155;
+  background: #1e1e1e;
+  border-color: #1e1e1e;
 }
 
 .suggestions-title {
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-secondary, #4b5563);
+  color: var(--text-secondary, #555555);
   margin: 0 0 16px 0;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .dark .suggestions-title {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .suggestions-list {
@@ -174,7 +174,7 @@
   display: inline-block;
   padding: 10px 16px;
   background: var(--bg-primary, #ffffff);
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
@@ -183,20 +183,20 @@
 }
 
 .dark .suggestions-list a {
-  background: #0f172a;
-  color: #ff8c42;
+  background: #121212;
+  color: #81c784;
 }
 
 .suggestions-list a:hover {
-  background: linear-gradient(135deg, #ea580c 0%, #ec4899 100%);
+  background: #7fc9a8;
   color: white;
   border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.2);
+  box-shadow: 0 4px 12px rgba(127, 201, 168, 0.2);
 }
 
 .dark .suggestions-list a:hover {
-  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.2);
+  box-shadow: 0 4px 12px rgba(129, 199, 132, 0.2);
 }
 
 /* Responsive */

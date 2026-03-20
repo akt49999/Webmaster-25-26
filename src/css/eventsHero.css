@@ -1,6 +1,6 @@
 /* Events Hero Section */
 .events-hero {
-    background: linear-gradient(to bottom right, #ea580c, #ec4899, #9333ea);
+    background: linear-gradient(to bottom right, #7fc9a8, #7fc9a8, #7fddbb);
     padding: 80px 20px;
     text-align: center;
 }
@@ -52,7 +52,7 @@
 }
 
 .search-input-wrapper input::placeholder {
-    color: #9ca3af;
+    color: #888888;
 }
 
 .search-icon {

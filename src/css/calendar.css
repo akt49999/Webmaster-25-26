@@ -6,8 +6,8 @@
 }
 
 .dark .calendar-page {
-  background-color: #0f172a;
-  background: #0f172a;
+  background-color: #121212;
+  background: #121212;
 }
 
 .calendar-header {
@@ -24,14 +24,14 @@
   font-weight: 800;
   color: var(--text-primary, #1a1a1a);
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, var(--accent-orange, #ea580c), var(--accent-pink, #ec4899));
+  background: linear-gradient(135deg, var(--accent-orange, #7fc9a8), var(--accent-pink, #7fc9a8));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .dark .calendar-header h1 {
-  background: linear-gradient(135deg, #ff6b4a, #ff8c42);
+  background: #81c784;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -46,7 +46,7 @@
 }
 
 .dark .calendar-header p {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .calendar-container {
@@ -59,7 +59,7 @@
 }
 
 .dark .calendar-container {
-  background: #1f2937;
+  background: #2e7d32;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -80,11 +80,11 @@
 }
 
 .dark .calendar-nav {
-  border-bottom-color: #475569;
+  border-bottom-color: #404040;
 }
 
 .dark .calendar-nav h2 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .nav-button {
@@ -103,12 +103,12 @@
 }
 
 .dark .nav-button {
-  border-color: #374151;
+  border-color: #555555;
   color: white;
 }
 
 .dark .nav-button:hover {
-  background: #374151;
+  background: #555555;
 }
 
 .calendar-grid {
@@ -134,11 +134,11 @@
 }
 
 .dark .calendar-weekdays {
-  border-bottom-color: #475569;
+  border-bottom-color: #404040;
 }
 
 .dark .weekday {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .calendar-days {
@@ -163,7 +163,7 @@
 
 .day:not(.empty):hover {
   background: var(--bg-tertiary, #f3f4f6);
-  border-color: var(--accent-orange, #ea580c);
+  border-color: var(--accent-orange, #7fc9a8);
 }
 
 .day.empty {
@@ -172,8 +172,8 @@
 }
 
 .day.has-events {
-  background: linear-gradient(135deg, rgba(234, 88, 12, 0.1), rgba(236, 72, 153, 0.1));
-  border-color: var(--accent-orange, #ea580c);
+  background: linear-gradient(135deg, rgba(127, 201, 168, 0.1), rgba(127, 201, 168, 0.1));
+  border-color: var(--accent-orange, #7fc9a8);
 }
 
 .day.has-events.clickable {
@@ -182,29 +182,29 @@
 }
 
 .day.has-events.clickable:hover {
-  background: linear-gradient(135deg, rgba(234, 88, 12, 0.2), rgba(236, 72, 153, 0.2));
+  background: linear-gradient(135deg, rgba(127, 201, 168, 0.2), rgba(127, 201, 168, 0.2));
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.2);
+  box-shadow: 0 4px 12px rgba(127, 201, 168, 0.2);
 }
 
 .dark .day {
-  background: #374151;
-  border-color: #4b5563;
+  background: #555555;
+  border-color: #555555;
 }
 
 .dark .day:not(.empty):hover {
-  background: #4b5563;
-  border-color: var(--accent-orange, #ea580c);
+  background: #555555;
+  border-color: var(--accent-orange, #7fc9a8);
 }
 
 .dark .day.has-events {
-  background: rgba(234, 88, 12, 0.2);
+  background: rgba(127, 201, 168, 0.2);
 }
 
 .dark .day.has-events.clickable:hover {
-  background: rgba(234, 88, 12, 0.35);
+  background: rgba(127, 201, 168, 0.35);
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(255, 107, 74, 0.3);
+  box-shadow: 0 4px 12px rgba(129, 199, 132, 0.3);
 }
 
 .day-number {
@@ -241,7 +241,7 @@
 }
 
 .dark .calendar-legend {
-  border-top-color: #475569;
+  border-top-color: #404040;
 }
 
 .legend-item {
@@ -253,7 +253,7 @@
 }
 
 .dark .legend-item {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .legend-dot {
@@ -276,7 +276,7 @@
 }
 
 .dark .upcoming-events h2 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .no-events {
@@ -288,7 +288,7 @@
 }
 
 .dark .no-events {
-  background: #1f2937;
+  background: #2e7d32;
 }
 
 .no-events p {
@@ -329,7 +329,7 @@
   gap: 1rem;
   padding: 1.5rem;
   background: var(--card-bg, white);
-  border-left: 4px solid var(--accent-orange, #ea580c);
+  border-left: 4px solid var(--accent-orange, #7fc9a8);
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.2s ease;
@@ -340,7 +340,7 @@
 }
 
 .dark .event-item {
-  background: #1f2937;
+  background: #2e7d32;
 }
 
 .event-actions {
@@ -371,7 +371,7 @@
 }
 
 .dark .event-meta {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .event-meta span {
@@ -388,7 +388,7 @@
 }
 
 .dark .event-info p {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .event-remove {
@@ -434,12 +434,12 @@
 }
 
 .event-save:hover {
-  background: rgba(234, 88, 12, 0.1);
-  color: var(--accent-orange, #ea580c);
+  background: rgba(127, 201, 168, 0.1);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 .event-save.active {
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 .event-save.active svg {
@@ -448,7 +448,7 @@
 }
 
 .event-save.active:hover {
-  background: rgba(234, 88, 12, 0.1);
+  background: rgba(127, 201, 168, 0.1);
 }
 
 .event-save:has-next-sibling .event-remove {
@@ -456,7 +456,7 @@
 }
 
 .dark .event-save:hover {
-  background: rgba(255, 140, 66, 0.15);
+  background: rgba(129, 199, 132, 0.15);
   color: var(--accent-orange);
 }
 
@@ -470,7 +470,7 @@
 }
 
 .dark .event-save.active:hover {
-  background: rgba(255, 140, 66, 0.15);
+  background: rgba(129, 199, 132, 0.15);
   color: var(--accent-orange);
 }
 
@@ -492,11 +492,11 @@
 }
 
 .dark .calendar-empty h2 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .dark .calendar-empty p {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 /* Responsive */

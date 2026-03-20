@@ -1,62 +1,131 @@
 /* References Page Styles */
-.references-page {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    min-height: 60vh;
-    text-align: center;
-    background: var(--bg-primary, #ffffff);
-    color: var(--text-primary, #1f2937);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.references-hero {
-    text-align: center;
-    padding: 60px 20px 40px;
-    background: var(--bg-primary);
-}
-
-.references-hero h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
-    margin-bottom: 16px;
-    background: var(--btn-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.references-hero p {
-    font-size: 16px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
 .references-content {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 20px 60px;
+    padding: 60px 20px;
     background: var(--bg-primary);
 }
 
-.dark .references-page,
-.dark .references-hero,
-.dark .references-content {
-    background: var(--bg-primary);
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-number {
+    margin-bottom: 60px;
+    text-align: center;
 }
 
 .team-number h2 {
     font-size: 1.8em;
     font-weight: 600;
     margin-bottom: 8px;
+    color: var(--text-primary);
 }
 
 .team-number h3 {
     font-size: 3.5em;
     font-weight: 700;
     margin: 0;
+    color: var(--text-primary);
+}
+
+/* Section Headers */
+.references-content > div > h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.references-content > div > p {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Reference Cards */
+.reference-card {
+    padding: 24px;
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-radius: 12px;
+    background: var(--card-bg, #ffffff);
+    transition: all 0.3s ease;
+    text-align: center;
+    margin: 16px 0;
+}
+
+.reference-card:hover {
+    border-color: var(--accent-orange, #7fc9a8);
+    box-shadow: 0 8px 20px var(--shadow, rgba(0, 0, 0, 0.1));
+    transform: translateY(-4px);
+}
+
+.reference-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    color: var(--text-primary);
+    font-weight: 600;
+    text-align: center;
+}
+
+.reference-card p {
+    margin: 0 0 12px 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.reference-card a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--accent-orange, #7fc9a8);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: gap 0.2s ease;
+}
+
+.reference-card a:hover {
+    gap: 10px;
+    color: var(--text-primary);
+}
+
+.dark .reference-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.dark .reference-card h3 {
+    color: var(--text-primary);
+}
+
+.dark .reference-card p {
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-wrapper {
+        max-width: 100%;
+    }
+
+    .reference-card {
+        padding: 20px;
+    }
+
+    .team-number h3 {
+        font-size: 2.5em;
+    }
 }

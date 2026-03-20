@@ -73,7 +73,7 @@
   width: 2.5rem;
   height: 2.5rem;
   border: 3px solid var(--border-color, #e5e7eb);
-  border-top-color: var(--accent-orange, #ea580c);
+  border-top-color: var(--accent-orange, #7fc9a8);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -95,32 +95,32 @@
 
 /* Dark mode adjustments */
 .dark .skeleton-card {
-  background: var(--bg-secondary, #1f2937);
+  background: var(--bg-secondary, #2e7d32);
 }
 
 .dark .skeleton-image {
-  background: var(--border-color, #374151);
+  background: var(--border-color, #555555);
 }
 
 .dark .skeleton-title,
 .dark .skeleton-text {
-  background: var(--border-color, #374151);
+  background: var(--border-color, #555555);
 }
 
 .dark .skeleton-table {
-  background: var(--bg-secondary, #1f2937);
+  background: var(--bg-secondary, #2e7d32);
 }
 
 .dark .skeleton-header {
-  background: var(--border-color, #374151);
+  background: var(--border-color, #555555);
 }
 
 .dark .skeleton-row {
-  background: var(--bg-secondary, #1f2937);
-  border-bottom-color: var(--border-color, #374151);
+  background: var(--bg-secondary, #2e7d32);
+  border-bottom-color: var(--border-color, #555555);
 }
 
 .dark .spinner {
-  border-color: var(--border-color, #374151);
-  border-top-color: var(--accent-orange, #ff8c42);
+  border-color: var(--border-color, #555555);
+  border-top-color: var(--accent-orange, #81c784);
 }

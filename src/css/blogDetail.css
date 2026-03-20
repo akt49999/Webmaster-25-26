@@ -1,7 +1,7 @@
 /**
  * BLOG DETAIL PAGE STYLES
  * Individual blog post view with header, content, author bio, and related posts
- * Primary colors: Orange gradient #ea580c to #ec4899
+ * Primary colors: Orange gradient #7fc9a8 to #7fc9a8
  */
 
 .blog-detail-container {
@@ -139,9 +139,9 @@
 }
 
 .blog-detail-action-btn:hover {
-  border-color: #ea580c;
-  color: #ea580c;
-  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.1);
+  border-color: #7fc9a8;
+  color: #7fc9a8;
+  box-shadow: 0 2px 8px rgba(127, 201, 168, 0.1);
 }
 
 .blog-detail-share-btn {
@@ -268,7 +268,7 @@
 .blog-detail-related-card:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   transform: translateY(-4px);
-  border-color: #ea580c;
+  border-color: #7fc9a8;
 }
 
 .blog-detail-related-image {
@@ -309,7 +309,7 @@
 }
 
 .blog-detail-related-card:hover .blog-detail-related-category {
-  background: #ff6b4a;
+  background: #81c784;
   color: white;
 }
 
@@ -425,11 +425,11 @@
 
 /* Dark Mode */
 .dark .blog-detail-container {
-  background: #0f172a;
+  background: #121212;
 }
 
 .dark .blog-detail-header {
-  background: #1a1a2e;
+  background: #161829;
 }
 
 .dark .blog-detail-header-overlay {
@@ -437,7 +437,7 @@
 }
 
 .dark .blog-detail-title {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .dark .blog-detail-meta {
@@ -449,23 +449,23 @@
 }
 
 .dark .blog-detail-action-btn {
-  background: #1e293b;
-  border-color: #334155;
+  background: #1e1e1e;
+  border-color: #1e1e1e;
   color: #e2e8f0;
 }
 
 .dark .blog-detail-action-btn:hover {
-  border-color: #ff6b4a;
-  color: #ff8c42;
-  box-shadow: 0 2px 8px rgba(255, 107, 74, 0.2);
+  border-color: #81c784;
+  color: #81c784;
+  box-shadow: 0 2px 8px rgba(129, 199, 132, 0.2);
 }
 
 .dark .blog-detail-share-btn {
-  background: linear-gradient(135deg, #ff6b4a 0%, #ff8c42 100%);
+  background: #81c784;
 }
 
 .dark .blog-detail-share-btn:hover {
-  box-shadow: 0 4px 16px rgba(255, 107, 74, 0.3);
+  box-shadow: 0 4px 16px rgba(129, 199, 132, 0.3);
 }
 
 .dark .blog-detail-article {
@@ -473,65 +473,65 @@
 }
 
 .dark .blog-detail-article h3 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .dark .blog-detail-article a {
-  color: #ff8c42;
+  color: #81c784;
 }
 
 .dark .blog-detail-article a:hover {
-  color: #ff6b4a;
+  color: #81c784;
 }
 
 .dark .blog-detail-article strong {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .dark .blog-detail-author-bio {
-  background: linear-gradient(135deg, rgba(255, 107, 74, 0.1) 0%, rgba(255, 140, 66, 0.1) 100%);
-  border-color: rgba(255, 107, 74, 0.2);
+  background: rgba(129, 199, 132, 0.1);
+  border-color: rgba(129, 199, 132, 0.2);
 }
 
 .dark .blog-detail-author-info h3 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .dark .blog-detail-author-info p {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .dark .blog-detail-related h3 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .dark .blog-detail-related-card {
-  background: #1e293b;
-  border-color: #334155;
+  background: #1e1e1e;
+  border-color: #1e1e1e;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .dark .blog-detail-related-card:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  border-color: #ff6b4a;
+  border-color: #81c784;
 }
 
 .dark .blog-detail-related-category {
-  background: rgba(255, 107, 74, 0.15);
-  color: #ff8c42;
+  background: rgba(129, 199, 132, 0.15);
+  color: #81c784;
 }
 
 .dark .blog-detail-related-card:hover .blog-detail-related-category {
-  background: #ff6b4a;
+  background: #81c784;
   color: white;
 }
 
 .dark .blog-detail-related-content h4 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .dark .blog-detail-related-card:hover h4 {
-  color: #ff8c42;
+  color: #81c784;
 }
 
 .dark .blog-detail-related-meta {
@@ -539,19 +539,19 @@
 }
 
 .dark .blog-detail-not-found-content h2 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .dark .blog-detail-back-btn {
-  background: linear-gradient(135deg, #ff6b4a 0%, #ff8c42 100%);
+  background: #81c784;
 }
 
 .dark .blog-detail-back-btn:hover {
-  box-shadow: 0 4px 16px rgba(255, 107, 74, 0.3);
+  box-shadow: 0 4px 16px rgba(129, 199, 132, 0.3);
 }
 
 .dark .blog-detail-actions {
-  border-bottom-color: #334155;
+  border-bottom-color: #1e1e1e;
 }
 
 /* Loading State */
@@ -566,21 +566,21 @@
 }
 
 .dark .blog-detail-loading {
-  background: #0f172a;
+  background: #121212;
 }
 
 .blog-detail-loading-spinner {
   width: 48px;
   height: 48px;
   border: 4px solid #e2e8f0;
-  border-top-color: #ea580c;
+  border-top-color: #7fc9a8;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 .dark .blog-detail-loading-spinner {
-  border-color: #334155;
-  border-top-color: #ff8c42;
+  border-color: #1e1e1e;
+  border-top-color: #81c784;
 }
 
 @keyframes spin {
@@ -598,8 +598,8 @@
 
 /* Liked State */
 .blog-detail-action-btn.liked {
-  color: #ec4899;
-  border-color: #ec4899;
+  color: #7fc9a8;
+  border-color: #7fc9a8;
 }
 
 .dark .blog-detail-action-btn.liked {
@@ -615,7 +615,7 @@
 }
 
 .dark .blog-detail-comments {
-  border-top-color: #334155;
+  border-top-color: #1e1e1e;
 }
 
 .blog-detail-comments h3 {
@@ -629,7 +629,7 @@
 }
 
 .dark .blog-detail-comments h3 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 /* Comment Form */
@@ -673,7 +673,7 @@
 
 .blog-comment-input-wrapper textarea:focus {
   outline: none;
-  border-color: #ea580c;
+  border-color: #7fc9a8;
 }
 
 .blog-comment-input-wrapper textarea:disabled {
@@ -682,17 +682,17 @@
 }
 
 .dark .blog-comment-input-wrapper textarea {
-  background: #1e293b;
-  border-color: #334155;
+  background: #1e1e1e;
+  border-color: #1e1e1e;
   color: #e2e8f0;
 }
 
 .dark .blog-comment-input-wrapper textarea:focus {
-  border-color: #ff8c42;
+  border-color: #81c784;
 }
 
 .dark .blog-comment-input-wrapper textarea:disabled {
-  background: #0f172a;
+  background: #121212;
 }
 
 .blog-comment-submit {
@@ -750,8 +750,8 @@
 }
 
 .dark .blog-comment {
-  background: #1e293b;
-  border-color: #334155;
+  background: #1e1e1e;
+  border-color: #1e1e1e;
 }
 
 .blog-comment-header {
@@ -786,7 +786,7 @@
 }
 
 .dark .blog-comment-author {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .blog-comment-date {
@@ -795,12 +795,12 @@
 }
 
 .blog-comment-content {
-  color: #475569;
+  color: #404040;
   line-height: 1.6;
   margin: 0;
   font-size: 0.95rem;
 }
 
 .dark .blog-comment-content {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }

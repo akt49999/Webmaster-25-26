@@ -30,7 +30,7 @@
   width: 48px;
   height: 48px;
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #ec4899;
+  border-top: 4px solid #7fc9a8;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -71,15 +71,15 @@
 .forum-topic-not-found h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #1f2937;
+  color: #2e7d32;
 }
 
 .dark .forum-topic-not-found h2 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .forum-topic-not-found p {
-  color: #6b7280;
+  color: #555555;
   margin-bottom: 1.5rem;
 }
 
@@ -109,7 +109,7 @@
   gap: 0.5rem;
   background: none;
   border: none;
-  color: #6b7280;
+  color: #555555;
   cursor: pointer;
   font-size: 0.95rem;
   padding: 0.5rem 0;
@@ -159,7 +159,7 @@
 }
 
 .forum-topic-badge.pinned {
-  background: rgba(234, 88, 12, 0.1);
+  background: rgba(127, 201, 168, 0.1);
   color: var(--accent-orange);
 }
 
@@ -174,20 +174,20 @@
 }
 
 .forum-topic-badge.category {
-  background: rgba(236, 72, 153, 0.1);
+  background: rgba(127, 201, 168, 0.1);
   color: var(--accent-pink);
 }
 
 .forum-topic-title {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #2e7d32;
   margin-bottom: 1.5rem;
   line-height: 1.3;
 }
 
 .dark .forum-topic-title {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .forum-topic-author-info {
@@ -218,18 +218,18 @@
 
 .forum-topic-author-name {
   font-weight: 600;
-  color: #1f2937;
+  color: #2e7d32;
 }
 
 .dark .forum-topic-author-name {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .forum-topic-timestamp {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #6b7280;
+  color: #555555;
   font-size: 0.875rem;
 }
 
@@ -245,7 +245,7 @@
 }
 
 .dark .forum-topic-body {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .forum-topic-tags {
@@ -258,14 +258,14 @@
 .forum-topic-tag {
   padding: 0.25rem 0.75rem;
   background: #f3f4f6;
-  color: #6b7280;
+  color: #555555;
   border-radius: 9999px;
   font-size: 0.8rem;
 }
 
 .dark .forum-topic-tag {
-  background: #374151;
-  color: #9ca3af;
+  background: #555555;
+  color: #888888;
 }
 
 .forum-topic-actions {
@@ -277,7 +277,7 @@
 }
 
 .dark .forum-topic-actions {
-  border-top-color: #374151;
+  border-top-color: #555555;
 }
 
 .forum-topic-stats {
@@ -291,7 +291,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #6b7280;
+  color: #555555;
   background: none;
   border: none;
   cursor: pointer;
@@ -300,11 +300,11 @@
 }
 
 .forum-topic-action-btn:hover {
-  color: #ec4899;
+  color: #7fc9a8;
 }
 
 .forum-topic-action-btn.liked {
-  color: #ec4899;
+  color: #7fc9a8;
 }
 
 .forum-topic-action-btn.bookmarked {
@@ -348,12 +348,12 @@
   align-items: center;
   gap: 0.75rem;
   font-size: 1.1rem;
-  color: #1f2937;
+  color: #2e7d32;
   margin-bottom: 1rem;
 }
 
 .dark .forum-reply-form-container h3 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .forum-reply-cancel {
@@ -400,12 +400,12 @@
   resize: vertical;
   transition: border-color 0.2s;
   background: white;
-  color: #1f2937;
+  color: #2e7d32;
 }
 
 .forum-reply-form textarea:focus {
   outline: none;
-  border-color: #ec4899;
+  border-color: #7fc9a8;
 }
 
 .forum-reply-form textarea:disabled {
@@ -414,8 +414,8 @@
 }
 
 .dark .forum-reply-form textarea {
-  background: #0f172a;
-  border-color: #374151;
+  background: #121212;
+  border-color: #555555;
   color: #e2e8f0;
 }
 
@@ -424,7 +424,7 @@
 }
 
 .dark .forum-reply-form textarea:disabled {
-  background: #1e293b;
+  background: #1e1e1e;
 }
 
 .forum-reply-submit {
@@ -467,11 +467,11 @@
 
 .forum-replies-header h3 {
   font-size: 1.25rem;
-  color: #1f2937;
+  color: #2e7d32;
 }
 
 .dark .forum-replies-header h3 {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .forum-replies-sort select {
@@ -485,8 +485,8 @@
 }
 
 .dark .forum-replies-sort select {
-  background: #1e293b;
-  border-color: #374151;
+  background: #1e1e1e;
+  border-color: #555555;
   color: #e2e8f0;
 }
 
@@ -584,16 +584,16 @@
 
 .forum-reply-author-name {
   font-weight: 600;
-  color: #1f2937;
+  color: #2e7d32;
 }
 
 .dark .forum-reply-author-name {
-  color: #f1f5f9;
+  color: #81c784;
 }
 
 .forum-reply-timestamp {
   font-size: 0.8rem;
-  color: #6b7280;
+  color: #555555;
 }
 
 .dark .forum-reply-timestamp {
@@ -612,7 +612,7 @@
 .forum-reply-menu-btn {
   background: none;
   border: none;
-  color: #6b7280;
+  color: #555555;
   cursor: pointer;
   padding: 0.25rem;
   border-radius: 0.25rem;
@@ -628,7 +628,7 @@
 }
 
 .dark .forum-reply-menu-btn:hover {
-  background: #374151;
+  background: #555555;
 }
 
 .forum-reply-dropdown {
@@ -644,8 +644,8 @@
 }
 
 .dark .forum-reply-dropdown {
-  background: #1e293b;
-  border: 1px solid #374151;
+  background: #1e1e1e;
+  border: 1px solid #555555;
 }
 
 .forum-reply-dropdown button {
@@ -676,11 +676,11 @@
 }
 
 .dark .forum-reply-dropdown button {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .dark .forum-reply-dropdown button:hover {
-  background: #374151;
+  background: #555555;
 }
 
 .forum-reply-content {
@@ -690,7 +690,7 @@
 }
 
 .dark .forum-reply-content {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 /* Edit Reply */
@@ -711,12 +711,12 @@
 
 .forum-reply-edit textarea:focus {
   outline: none;
-  border-color: #ec4899;
+  border-color: #7fc9a8;
 }
 
 .dark .forum-reply-edit textarea {
-  background: #0f172a;
-  border-color: #374151;
+  background: #121212;
+  border-color: #555555;
   color: #e2e8f0;
 }
 
@@ -737,7 +737,7 @@
 
 .forum-reply-edit-actions button.cancel {
   background: #e5e7eb;
-  color: #4b5563;
+  color: #555555;
 }
 
 .forum-reply-edit-actions button.save {
@@ -746,7 +746,7 @@
 }
 
 .dark .forum-reply-edit-actions button.cancel {
-  background: #374151;
+  background: #555555;
   color: #e2e8f0;
 }
 
@@ -768,18 +768,18 @@
   gap: 0.5rem;
   background: none;
   border: none;
-  color: #6b7280;
+  color: #555555;
   cursor: pointer;
   font-size: 0.875rem;
   transition: all 0.2s;
 }
 
 .forum-reply-action:hover {
-  color: #ec4899;
+  color: #7fc9a8;
 }
 
 .forum-reply-action.liked {
-  color: #ec4899;
+  color: #7fc9a8;
 }
 
 .dark .forum-reply-action {

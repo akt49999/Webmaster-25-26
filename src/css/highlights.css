@@ -1,10 +1,10 @@
 .highlights-section {
     padding: 80px 0;
-    background: linear-gradient(to bottom right, #fef2f2, #fdf2f8, #faf5ff);
+    background: #f5f7fb;
 }
 
 .dark .highlights-section {
-    background: #0f172a;
+    background: #161829;
 }
 
 .highlights-container {
@@ -22,10 +22,7 @@
     margin: 0 0 16px 0;
     font-size: 36px;
     font-weight: 700;
-    background: linear-gradient(135deg, #ff6b4a 0%, #ff8c42 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #2e7d32;
 }
 
 .highlights-header p {
@@ -50,7 +47,7 @@
     border-radius: 24px;
     padding: 32px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    border: 1px solid #f0f0f0;
+    border: 1px solid #e5e7eb;
     transition: all 0.3s ease;
 }
 
@@ -74,52 +71,43 @@
 /* Color variants for icons */
 .highlight-rose-pink .highlight-icon-wrapper,
 .highlight-bg-rose-pink-light {
-    background: linear-gradient(135deg, #fce7f3, #fbf1f9);
+    background: #f0f8f5;
 }
 
 .highlight-rose-pink svg {
-    background: linear-gradient(135deg, #fb923c 0%, #ec4899 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #7fc9a8;
 }
 
 .highlight-blue-cyan .highlight-icon-wrapper,
 .highlight-bg-blue-cyan-light {
-    background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+    background: #f0f8f5;
 }
 
 .highlight-blue-cyan svg {
-    background: linear-gradient(135deg, #3b82f6, #06b6d4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #7fddbb;
 }
 
 .highlight-amber-orange .highlight-icon-wrapper,
 .highlight-bg-amber-orange-light {
-    background: linear-gradient(135deg, #fef3c7, #fef08a);
+    background: #f0f8f5;
 }
 
 .highlight-amber-orange svg {
-    background: linear-gradient(135deg, #f59e0b, #f97316);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #8fe0c6;
 }
 
 .highlight-card h3 {
     margin: 0 0 16px 0;
     font-size: 20px;
     font-weight: 700;
-    color: #111827;
+    color: #2e7d32;
 }
 
 .highlight-card p {
     margin: 0 0 24px 0;
     font-size: 15px;
     line-height: 1.6;
-    color: #6b7280;
+    color: #555555;
 }
 
 .highlight-btn {
@@ -134,77 +122,81 @@
 }
 
 .highlight-btn-rose-pink {
-    background: linear-gradient(135deg, #fb923c 0%, #ec4899 100%);
+    background: #7fc9a8;
+    color: white;
 }
 
 .dark .highlight-btn-rose-pink {
-    background: linear-gradient(135deg, #ff6b4a, #ff8c42);
+    background: #388e71;
+    color: white;
 }
 
 .dark .highlight-card {
-    background: #1e293b;
-    border-color: #334155;
+    background: #1e1e1e;
+    border-color: #404040;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .dark .highlight-card:hover {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    border-color: #ff6b4a;
+    border-color: #81c784;
 }
 
 .dark .highlight-card h3 {
-    color: #f1f5f9;
+    color: #81c784;
 }
 
 .dark .highlight-card p {
-    color: #cbd5e1;
+    color: #e0e0e0;
 }
 
 .dark .highlights-header p {
-    color: #cbd5e1;
+    color: #e0e0e0;
 }
 
 .dark .testimonial-header {
-    color: #f1f5f9;
+    color: #81c784;
 }
 
 .dark .testimonial-card {
-    background: #1e293b;
-    border-color: #334155;
+    background: #1e1e1e;
+    border-color: #404040;
 }
 
 .dark .testimonial-quote {
-    color: #cbd5e1;
+    color: #e0e0e0;
 }
 
 .dark .testimonial-author {
-    color: #f1f5f9;
+    color: #81c784;
 }
 
 .dark .testimonial-title {
-    color: #cbd5e1;
+    color: #e0e0e0;
 }
 
 .highlight-btn-rose-pink:hover {
-    box-shadow: 0 10px 20px rgba(244, 63, 94, 0.3);
+    box-shadow: 0 10px 20px rgba(127, 201, 168, 0.3);
     transform: translateY(-2px);
 }
 
 .highlight-btn-blue-cyan {
-    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    background: #7fddbb;
+    color: white;
 }
 
 .highlight-btn-blue-cyan:hover {
-    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 10px 20px rgba(127, 221, 187, 0.3);
     transform: translateY(-2px);
 }
 
 .highlight-btn-amber-orange {
-    background: linear-gradient(135deg, #f59e0b, #f97316);
+    background: #8fe0c6;
+    color: white;
 }
 
 .highlight-btn-amber-orange:hover {
-    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+    box-shadow: 0 10px 20px rgba(143, 224, 198, 0.3);
     transform: translateY(-2px);
 }
 
@@ -233,10 +225,6 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-}
-
-.testimonial-carousel::-webkit-scrollbar {
-    height: 8px;
 }
 
 .testimonial-carousel::-webkit-scrollbar-track {
@@ -306,7 +294,7 @@
     border-radius: 16px;
     padding: 32px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    border: 1px solid #f0f0f0;
+    border: 1px solid #e5e7eb;
     min-width: 320px;
     max-width: 400px;
     flex-shrink: 0;
@@ -323,7 +311,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #fb923c 0%, #ec4899 100%);
+    background: #7fc9a8;
     border: 2px solid white;
     display: flex;
     align-items: center;
@@ -346,7 +334,7 @@
 .testimonial-quote {
     margin: 0 0 16px 0;
     font-size: 16px;
-    color: #374151;
+    color: #2e7d32;
     line-height: 1.8;
     font-style: italic;
 }
@@ -354,7 +342,7 @@
 .testimonial-author {
     margin: 0;
     font-size: 13px;
-    color: #6b7280;
+    color: #555555;
     font-weight: 500;
 }
 

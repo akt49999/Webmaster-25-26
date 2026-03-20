@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #ea580c 0%, #ec4899 100%);
+  background: #7fc9a8;
   padding: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -24,14 +24,14 @@
 .signup-title {
   font-size: 28px;
   font-weight: 700;
-  color: #1f2937;
+  color: #2e7d32;
   margin: 0 0 8px 0;
   text-align: center;
 }
 
 .signup-subtitle {
   font-size: 14px;
-  color: #4b5563;
+  color: #555555;
   text-align: center;
   margin: 0 0 30px 0;
 }
@@ -93,7 +93,7 @@
 .form-group label {
   font-size: 14px;
   font-weight: 600;
-  color: #1f2937;
+  color: #2e7d32;
 }
 
 .input-wrapper {
@@ -121,13 +121,13 @@
   transition: all 0.3s ease;
   box-sizing: border-box;
   background: #ffffff;
-  color: #1f2937;
+  color: #2e7d32;
 }
 
 .form-input:focus {
   outline: none;
-  border-color: #fb923c;
-  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.1);
+  border-color: #7fc9a8;
+  box-shadow: 0 0 0 3px rgba(127, 201, 168, 0.1);
 }
 
 .form-input::placeholder {
@@ -150,7 +150,7 @@
 
 /* Icon color change on hover */
 .password-toggle:hover {
-  color: #fb923c;
+  color: #7fc9a8;
 }
 
 /* Container for remember me and forgot password */
@@ -164,7 +164,7 @@
 .signup-button {
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg, #ea580c 0%, #ec4899 100%);
+  background: #7fc9a8;
   color: white;
   border: none;
   border-radius: 8px;
@@ -172,13 +172,13 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(234, 88, 12, 0.4);
+  box-shadow: 0 4px 15px rgba(127, 201, 168, 0.4);
 }
 
 /* Button hover effect - slight lift and enhanced shadow */
 .signup-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.6);
+  box-shadow: 0 6px 20px rgba(127, 201, 168, 0.6);
 }
 
 /* Disabled state - appears greyed out */
@@ -209,7 +209,7 @@
   top: 50%;
   width: calc(50% - 15px);
   height: 1px;
-  background-color: #475569;
+  background-color: #404040;
 }
 
 /* Left divider line */
@@ -229,7 +229,7 @@
 
 /* Dark Mode Support */
 .dark .signup-container {
-  background: linear-gradient(135deg, #1a2a4e 0%, #0f172a 100%);
+  background: #1a1a2a;
 }
 
 /* Password Strength Indicator */
@@ -268,7 +268,7 @@
   align-items: center;
   gap: 4px;
   font-size: 11px;
-  color: #9ca3af;
+  color: #888888;
 }
 
 .requirement.met {
@@ -323,7 +323,7 @@
 
 .dark .form-input:focus {
   border-color: var(--accent-orange);
-  box-shadow: 0 0 0 3px rgba(255, 107, 74, 0.2);
+  box-shadow: 0 0 0 3px rgba(129, 199, 132, 0.2);
 }
 
 .dark .form-input::placeholder {
@@ -372,7 +372,7 @@
 /* Google button hover state */
 .google-signup:hover {
   background-color: white;
-  border-color: #475569;
+  border-color: #404040;
 }
 
 /* Google logo sizing */
@@ -382,12 +382,12 @@
 }
 
 .dark .google-signup {
-  background-color: #0f172a;
+  background-color: #121212;
   color: #e2e8f0;
-  border: 2px solid #334155;
+  border: 2px solid #1e1e1e;
 }
 
 .dark .google-signup:hover {
-  background-color: #1e293b;
-  border-color: #475569;
+  background-color: #1e1e1e;
+  border-color: #404040;
 }

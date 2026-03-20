@@ -54,10 +54,7 @@
 }
 
 .logo-text {
-  background: linear-gradient(90deg, #ea580c, #be185d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #2e7d32;
   font-weight: 600;
   font-size: 0.95rem;
   white-space: nowrap;
@@ -77,7 +74,7 @@
 
 .nav-link {
   position: relative;
-  color: var(--text-secondary, #374151);
+  color: var(--text-secondary, #555555);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
@@ -86,11 +83,11 @@
 }
 
 .nav-link:hover {
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 .nav-link-active {
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 .nav-underline {
@@ -98,7 +95,7 @@
   bottom: -8px;
   left: 0;
   height: 2px;
-  background-color: #ea580c;
+  background-color: #7fc9a8;
   transition: width 0.3s ease;
   width: 0;
   display: block;
@@ -153,11 +150,11 @@
 }
 
 .dark .nav-dark-mode-btn {
-  background: #1f2937;
+  background: #1e1e1e;
 }
 
 .dark .nav-dark-mode-btn:hover {
-  color: #0f172a;
+  color: #121212;
 }
 
 .navbar-toggle {
@@ -167,13 +164,13 @@
   padding: 0.5rem;
   background: none;
   border: none;
-  color: #374151;
+  color: #555555;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .navbar-toggle:hover {
-  color: #ea580c;
+  color: #7fc9a8;
 }
 
 @media (min-width: 1024px) {
@@ -197,7 +194,7 @@
 .nav-link-mobile {
   display: block;
   padding: 0.75rem 0;
-  color: #374151;
+  color: #555555;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
@@ -205,18 +202,18 @@
 }
 
 .nav-link-mobile:hover {
-  color: #ea580c;
+  color: #7fc9a8;
 }
 
 .nav-link-mobile-active {
-  color: #ea580c;
+  color: #7fc9a8;
 }
 
 .nav-login-btn-mobile {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #fb923c 0%, #ec4899 100%);
+  background: #7fc9a8;
   color: white;
   padding: 0.625rem 1.5rem;
   border: none;
@@ -231,7 +228,7 @@
 }
 
 .nav-login-btn-mobile:hover {
-  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 10px 20px rgba(127, 201, 168, 0.3);
   transform: translateY(-2px);
 }
 
@@ -245,7 +242,7 @@
 }
 
 .dark .navbar-mobile-actions {
-  border-top-color: #374151;
+  border-top-color: #555555;
 }
 
 .nav-dark-mode-btn-mobile {
@@ -253,9 +250,9 @@
   align-items: center;
   justify-content: center;
   background: #f3f4f6;
-  color: #ea580c;
+  color: #7fc9a8;
   padding: 0.75rem 1rem;
-  border: 2px solid #ea580c;
+  border: 2px solid #7fc9a8;
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -264,22 +261,22 @@
 }
 
 .nav-dark-mode-btn-mobile:hover {
-  background: #ea580c;
+  background: #7fc9a8;
   color: white;
-  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+  box-shadow: 0 4px 12px rgba(127, 201, 168, 0.3);
   transform: translateY(-2px);
 }
 
 .dark .nav-dark-mode-btn-mobile {
-  background: #1f2937;
-  color: #ff8c42;
-  border-color: #ff8c42;
+  background: #1e1e1e;
+  color: #81c784;
+  border-color: #81c784;
 }
 
 .dark .nav-dark-mode-btn-mobile:hover {
-  background: #ff8c42;
-  color: #0f172a;
-  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3);
+  background: #81c784;
+  color: #121212;
+  box-shadow: 0 4px 12px rgba(129, 199, 132, 0.3);
   transform: translateY(-2px);
 }
 /* User menu styles */
@@ -298,7 +295,7 @@
   border: 1px solid #e5e7eb;
   border-radius: 6px;
   background: var(--bg-primary, white);
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
@@ -344,19 +341,19 @@
 }
 
 .dark .user-profile-btn {
-  background: #1f2937;
+  background: #2e7d32;
   color: #f3f4f6;
-  border-color: #374151;
+  border-color: #555555;
 }
 
 .dark .user-profile-btn:hover {
   background: #111827;
-  border-color: #4b5563;
+  border-color: #555555;
 }
 
 .dark .nav-logout-btn {
-  background: #1f2937;
-  border-color: #374151;
+  background: #2e7d32;
+  border-color: #555555;
   color: #fca5a5;
 }
 
@@ -370,7 +367,7 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ec4899 0%, #fb923c 100%);
+  background: #7fc9a8;
   color: white;
   font-weight: 600;
   font-size: 0.875rem;
@@ -385,11 +382,11 @@
 
 .user-initials-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 4px 12px rgba(127, 201, 168, 0.4);
 }
 
 .dark .user-initials-btn {
-  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  background: linear-gradient(135deg, #8fe0c6 0%, #7fc9a8 100%);
 }
 
 .dark .user-initials-btn:hover {
@@ -416,29 +413,29 @@
 }
 
 .dark .user-dropdown-menu {
-  background-color: #1e293b;
-  background: #1e293b;
-  border-color: #475569;
+  background-color: #1e1e1e;
+  background: #1e1e1e;
+  border-color: #404040;
 }
 
 .user-menu-header {
   padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border-color, #e5e7eb);
   background: var(--bg-primary, white);
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
 }
 
 .dark .user-menu-header {
-  background-color: #1e293b;
-  background: #1e293b;
-  border-color: #475569;
-  color: #f1f5f9;
+  background-color: #1e1e1e;
+  background: #1e1e1e;
+  border-color: #404040;
+  color: #81c784;
 }
 
 .user-email-label {
   font-size: 0.7rem;
   font-weight: 700;
-  color: var(--text-tertiary, #9ca3af);
+  color: var(--text-tertiary, #888888);
   word-break: break-all;
   display: block;
   line-height: 1.6;
@@ -460,7 +457,7 @@
   background: var(--bg-primary, white);
   border: none;
   cursor: pointer;
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
   font-size: 0.9375rem;
   font-weight: 500;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -495,31 +492,31 @@
   width: 18px;
   height: 18px;
   transition: all 0.2s ease;
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 .user-menu-item:hover svg {
   opacity: 1;
   transform: scale(1.1);
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 .user-menu-item:hover {
-  background: rgba(234, 88, 12, 0.1);
-  color: var(--text-primary, #1f2937);
+  background: rgba(127, 201, 168, 0.1);
+  color: var(--text-primary, #2e7d32);
   transform: translateX(2px);
 }
 
 .dark .user-menu-item {
-  background-color: #1e293b;
-  background: #1e293b;
-  color: #cbd5e1;
+  background-color: #1e1e1e;
+  background: #1e1e1e;
+  color: #e0e0e0;
 }
 
 .dark .user-menu-item:hover {
-  background-color: rgba(255, 140, 66, 0.2);
-  background: rgba(255, 140, 66, 0.2);
-  color: #f1f5f9;
+  background-color: rgba(129, 199, 132, 0.2);
+  background: rgba(129, 199, 132, 0.2);
+  color: #81c784;
 }
 
 .user-menu-item.logout svg {
@@ -528,16 +525,16 @@
 
 .user-menu-item.logout:hover {
   background: rgba(239, 68, 68, 0.1);
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
 }
 
 .user-menu-item.admin-link svg {
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 .user-menu-item.admin-link:hover {
-  background: rgba(234, 88, 12, 0.1);
-  color: var(--text-primary, #1f2937);
+  background: rgba(127, 201, 168, 0.1);
+  color: var(--text-primary, #2e7d32);
 }
 
 .dark .user-menu-item.logout svg {
@@ -546,16 +543,16 @@
 
 .dark .user-menu-item.logout:hover {
   background: rgba(255, 107, 107, 0.15);
-  color: var(--text-primary, #f1f5f9);
+  color: var(--text-primary, #81c784);
 }
 
 .dark .user-menu-item.admin-link svg {
-  color: var(--accent-orange, #ff8c42);
+  color: var(--accent-orange, #81c784);
 }
 
 .dark .user-menu-item.admin-link:hover {
-  background: rgba(255, 140, 66, 0.15);
-  color: var(--text-primary, #f1f5f9);
+  background: rgba(129, 199, 132, 0.15);
+  color: var(--text-primary, #81c784);
 }
 
 .user-menu-divider {
@@ -566,7 +563,7 @@
 }
 
 .dark .user-menu-divider {
-  border-top-color: #475569;
+  border-top-color: #404040;
 }
 
 /* Mobile User Initials Button */
@@ -574,7 +571,7 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ec4899 0%, #fb923c 100%);
+  background: #7fc9a8;
   color: white;
   font-weight: 600;
   font-size: 0.75rem;
@@ -588,11 +585,11 @@
 
 .user-initials-btn-mobile:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 4px 12px rgba(127, 201, 168, 0.4);
 }
 
 .dark .user-initials-btn-mobile {
-  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  background: linear-gradient(135deg, #8fe0c6 0%, #7fc9a8 100%);
 }
 
 .dark .user-initials-btn-mobile:hover {
@@ -611,32 +608,32 @@
 .user-dropdown-menu-mobile .user-menu-header {
   background: var(--bg-primary, white);
   border-bottom: 1px solid var(--border-color, #e5e7eb);
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
 }
 
 .dark .user-dropdown-menu-mobile {
-  background-color: #1e293b;
-  background: #1e293b;
-  border-top-color: #475569;
+  background-color: #1e1e1e;
+  background: #1e1e1e;
+  border-top-color: #404040;
 }
 
 .dark .user-dropdown-menu-mobile .user-menu-header {
-  background-color: #1e293b;
-  background: #1e293b;
-  border-bottom-color: #475569;
-  color: #f1f5f9;
+  background-color: #1e1e1e;
+  background: #1e1e1e;
+  border-bottom-color: #404040;
+  color: #81c784;
 }
 
 .dark .user-dropdown-menu-mobile .user-menu-item {
-  background-color: #1e293b;
-  background: #1e293b;
-  color: #cbd5e1;
+  background-color: #1e1e1e;
+  background: #1e1e1e;
+  color: #e0e0e0;
 }
 
 .dark .user-dropdown-menu-mobile .user-menu-item:hover {
-  background-color: rgba(255, 140, 66, 0.2);
-  background: rgba(255, 140, 66, 0.2);
-  color: #f1f5f9;
+  background-color: rgba(129, 199, 132, 0.2);
+  background: rgba(129, 199, 132, 0.2);
+  color: #81c784;
 }
 
 /* Logout Animation */
@@ -947,28 +944,28 @@
 /* Improve keyboard navigation on mobile */
 @media (max-width: 1024px) {
   .navbar-toggle:focus {
-    outline: 2px solid #ea580c;
+    outline: 2px solid #7fc9a8;
     outline-offset: 2px;
   }
 
   .nav-link-mobile:focus {
-    outline: 2px solid #ea580c;
+    outline: 2px solid #7fc9a8;
     outline-offset: -2px;
     background: #f3f4f6;
   }
 
   .user-menu-item:focus {
-    outline: 2px solid #ea580c;
+    outline: 2px solid #7fc9a8;
     outline-offset: -4px;
     background: #f3f4f6;
   }
 
   .dark .nav-link-mobile:focus {
-    background: #374151;
+    background: #555555;
   }
 
   .dark .user-menu-item:focus {
-    background: #374151;
+    background: #555555;
   }
 }
 

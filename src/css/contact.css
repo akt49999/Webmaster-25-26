@@ -9,7 +9,7 @@
     min-height: 60vh;
     text-align: center;
     background: var(--bg-primary, #ffffff);
-    color: var(--text-primary, #1f2937);
+    color: var(--text-primary, #2e7d32);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +18,7 @@
 .page-container h2 {
     font-size: 32px;
     font-weight: 700;
-    color: var(--text-primary, #1f2937);
+    color: var(--text-primary, #2e7d32);
     margin-bottom: 16px;
     background: var(--btn-gradient);
     -webkit-background-clip: text;
@@ -29,7 +29,7 @@
 
 .page-container p {
     font-size: 16px;
-    color: var(--text-secondary, #4b5563);
+    color: var(--text-secondary, #555555);
     line-height: 1.6;
     max-width: 700px;
     margin: 0 auto;
@@ -54,15 +54,15 @@
     border-radius: 8px;
     font-size: 14px;
     background: var(--input-bg, #ffffff);
-    color: var(--text-primary, #1f2937);
+    color: var(--text-primary, #2e7d32);
     transition: border-color 200ms ease, box-shadow 200ms ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--accent-orange, #ea580c);
-    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
+    border-color: var(--accent-orange, #7fc9a8);
+    box-shadow: 0 0 0 3px rgba(127, 201, 168, 0.1);
 }
 
 .contact-form button {
@@ -240,7 +240,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent-orange);
-  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
+  box-shadow: 0 0 0 3px rgba(127, 201, 168, 0.1);
 }
 
 .form-group textarea {
@@ -314,7 +314,7 @@
 
 .contact-submit-btn {
   padding: 14px 32px;
-  background: linear-gradient(135deg, #ea580c 0%, #ec4899 100%);
+  background: #7fc9a8;
   color: white;
   border: none;
   border-radius: 8px;
@@ -332,7 +332,7 @@
 
 .contact-submit-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(234, 88, 12, 0.3);
+  box-shadow: 0 8px 24px rgba(127, 201, 168, 0.3);
 }
 
 .contact-submit-btn:active:not(:disabled) {
@@ -404,10 +404,10 @@
 .dark .form-group textarea:-webkit-autofill:hover,
 .dark .form-group textarea:-webkit-autofill:focus,
 .dark .form-group textarea:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0px 1000px #0f172a inset !important;
-  -webkit-text-fill-color: #f1f5f9 !important;
-  border: 2px solid #334155 !important;
-  caret-color: #f1f5f9 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #121212 inset !important;
+  -webkit-text-fill-color: #81c784 !important;
+  border: 2px solid #1e1e1e !important;
+  caret-color: #81c784 !important;
   transition: background-color 5000s ease-in-out 0s !important;
 }
 

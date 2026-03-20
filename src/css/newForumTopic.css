@@ -169,13 +169,13 @@
 }
 
 .new-topic-btn-primary {
-  background: linear-gradient(135deg, #ea580c 0%, #ec4899 100%);
+  background: #7fc9a8;
   color: white;
   border: none;
 }
 
 .dark .new-topic-btn-primary {
-  background: linear-gradient(135deg, #ff6b4a 0%, #ff8c42 100%);
+  background: #81c784;
 }
 
 .new-topic-btn-primary:hover:not(:disabled) {

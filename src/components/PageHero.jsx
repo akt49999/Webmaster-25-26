@@ -16,6 +16,8 @@ const PageHero = ({ title, subtitle, className = '' }) => {
         <div className="page-bg-layer page-bg-layer-2"></div>
         <div className="page-accent-shape accent-1"></div>
         <div className="page-accent-shape accent-2"></div>
+        <div className="page-accent-shape accent-3"></div>
+        <div className="page-accent-shape accent-4"></div>
       </div>
 
       <div className="page-hero-content">

@@ -23,26 +23,26 @@
 }
 
 .global-search-input-wrapper:focus-within {
-  border-color: var(--accent-orange, #ea580c);
-  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.1);
+  border-color: var(--accent-orange, #7fc9a8);
+  box-shadow: 0 0 0 3px rgba(127, 201, 168, 0.1);
 }
 
 .global-search-input-wrapper:hover {
-  border-color: var(--accent-orange, #ea580c);
+  border-color: var(--accent-orange, #7fc9a8);
 }
 
 .dark .global-search-input-wrapper {
-  background-color: #1f2937;
-  border-color: #374151;
+  background-color: #2e7d32;
+  border-color: #555555;
 }
 
 .dark .global-search-input-wrapper:hover,
 .dark .global-search-input-wrapper:focus-within {
-  border-color: #ff8c42;
+  border-color: #81c784;
 }
 
 .global-search-icon {
-  color: var(--text-tertiary, #9ca3af);
+  color: var(--text-tertiary, #888888);
   flex-shrink: 0;
 }
 
@@ -52,14 +52,14 @@
   border: none;
   outline: none;
   font-size: 0.95rem;
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
   font-family: inherit;
   width: 100%;
   min-width: 0;
 }
 
 .global-search-input::placeholder {
-  color: var(--text-tertiary, #9ca3af);
+  color: var(--text-tertiary, #888888);
 }
 
 .dark .global-search-input {
@@ -67,14 +67,14 @@
 }
 
 .dark .global-search-input::placeholder {
-  color: #9ca3af;
+  color: #888888;
 }
 
 .global-search-clear {
   background: none;
   border: none;
   padding: 0;
-  color: var(--text-secondary, #6b7280);
+  color: var(--text-secondary, #555555);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -84,16 +84,16 @@
 }
 
 .global-search-clear:hover {
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 .dark .global-search-clear:hover {
-  color: #ff8c42;
+  color: #81c784;
 }
 
 .global-search-loader {
   animation: spin 1s linear infinite;
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
   flex-shrink: 0;
 }
 
@@ -124,8 +124,8 @@
 }
 
 .dark .global-search-suggestions {
-  background-color: #1f2937;
-  border-color: #374151;
+  background-color: #2e7d32;
+  border-color: #555555;
 }
 
 .global-search-suggestion-item {
@@ -137,7 +137,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
   font-size: 0.9375rem;
   text-align: left;
   transition: background-color 0.2s ease;
@@ -149,17 +149,17 @@
 }
 
 .dark .global-search-suggestion-item:hover {
-  background-color: #374151;
+  background-color: #555555;
 }
 
 .global-search-suggestion-item:focus {
-  outline: 2px solid var(--accent-orange, #ea580c);
+  outline: 2px solid var(--accent-orange, #7fc9a8);
   outline-offset: -2px;
 }
 
 .global-search-suggestion-item svg {
   flex-shrink: 0;
-  color: var(--accent-orange, #ea580c);
+  color: var(--accent-orange, #7fc9a8);
   opacity: 0.7;
 }
 
@@ -173,7 +173,7 @@
 .global-search-no-results {
   padding: 1rem;
   text-align: center;
-  color: var(--text-tertiary, #9ca3af);
+  color: var(--text-tertiary, #888888);
   font-size: 0.875rem;
   border: 1px solid var(--border-color, #e5e7eb);
   border-top: none;
@@ -183,8 +183,8 @@
 }
 
 .dark .global-search-no-results {
-  background-color: #1f2937;
-  border-color: #374151;
+  background-color: #2e7d32;
+  border-color: #555555;
 }
 
 /* Keyboard Shortcut Hint */
@@ -194,7 +194,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.75rem;
-  color: var(--text-tertiary, #9ca3af);
+  color: var(--text-tertiary, #888888);
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -211,8 +211,8 @@
 }
 
 .dark .global-search-hint kbd {
-  background-color: #374151;
-  border-color: #4b5563;
+  background-color: #555555;
+  border-color: #555555;
   color: #f3f4f6;
 }
 
@@ -243,10 +243,10 @@
 }
 
 .global-search-suggestions::-webkit-scrollbar-thumb {
-  background-color: var(--text-tertiary, #9ca3af);
+  background-color: var(--text-tertiary, #888888);
   border-radius: 3px;
 }
 
 .global-search-suggestions::-webkit-scrollbar-thumb:hover {
-  background-color: var(--text-secondary, #6b7280);
+  background-color: var(--text-secondary, #555555);
 }

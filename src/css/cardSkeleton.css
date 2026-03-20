@@ -5,7 +5,7 @@
   padding: 20px;
   border-radius: 12px;
   border: 1px solid var(--border-color, #e5e7eb);
-  border-left: 4px solid var(--accent-orange, #ea580c);
+  border-left: 4px solid var(--accent-orange, #7fc9a8);
   box-shadow: 0 2px 8px var(--shadow, rgba(0, 0, 0, 0.08));
   min-height: 240px;
 }
@@ -164,9 +164,9 @@
 .dark .skeleton-line {
   background: linear-gradient(
     90deg,
-    #334155 0%,
-    #475569 50%,
-    #334155 100%
+    #1e1e1e 0%,
+    #404040 50%,
+    #1e1e1e 100%
   );
   background-size: 200% 100%;
 }

@@ -76,10 +76,10 @@
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 5px rgba(255, 107, 74, 0.3);
+    box-shadow: 0 0 5px rgba(129, 199, 132, 0.3);
   }
   50% {
-    box-shadow: 0 0 20px rgba(255, 107, 74, 0.6);
+    box-shadow: 0 0 20px rgba(129, 199, 132, 0.6);
   }
 }
 
@@ -331,7 +331,7 @@ button:active {
 .resource-form__input:focus,
 .resource-form__textarea:focus {
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(251, 146, 60, 0.15);
+  box-shadow: 0 6px 16px rgba(127, 201, 168, 0.15);
 }
 
 .resource-form__submit {
@@ -341,7 +341,7 @@ button:active {
 
 .resource-form__submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(251, 146, 60, 0.25);
+  box-shadow: 0 10px 24px rgba(127, 201, 168, 0.25);
 }
 
 /* Heading animations */

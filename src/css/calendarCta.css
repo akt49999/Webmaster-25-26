@@ -4,7 +4,7 @@
 }
 
 .dark .calendar-cta {
-  background: #0f172a;
+  background: #121212;
 }
 
 .calendar-cta-content {
@@ -41,7 +41,7 @@
 }
 
 .dark .calendar-cta-content p {
-  color: #cbd5e1;
+  color: #e0e0e0;
 }
 
 .calendar-cta-button {

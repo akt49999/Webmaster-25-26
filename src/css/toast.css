@@ -124,8 +124,8 @@
 }
 
 .dark .toast-warning {
-  background: rgba(251, 146, 60, 0.15);
-  border-color: rgba(251, 146, 60, 0.3);
+  background: rgba(127, 201, 168, 0.15);
+  border-color: rgba(127, 201, 168, 0.3);
   color: #fed7aa;
 }
 

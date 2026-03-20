@@ -1,7 +1,7 @@
 /* Directory Section - Main Container */
 .directory-section {
     width: 100%;
-    background: linear-gradient(to bottom, var(--bg-secondary, #f9f9f7), var(--bg-primary, #ffffff));
+    background: linear-gradient(to bottom, var(--bg-secondary, #f0f0f0), var(--bg-primary, #ffffff));
     padding: clamp(48px, 8vw, 80px) 0;
     animation: sectionFadeIn 0.8s ease-out;
     contain: content;
@@ -86,8 +86,8 @@
 }
 
 .search-input:focus {
-    border-color: var(--accent-orange, #fb923c);
-    box-shadow: 0 4px 12px rgba(251, 146, 60, 0.2);
+    border-color: var(--accent-orange, #7fc9a8);
+    box-shadow: 0 4px 12px rgba(127, 201, 168, 0.2);
 }
 
 .search-input::placeholder {
@@ -133,16 +133,16 @@
 .category-btn:nth-child(8) { animation-delay: 0.48s; }
 
 .category-btn:hover {
-    border-color: var(--accent-orange, #fb923c);
-    color: var(--accent-orange, #fb923c);
+    border-color: var(--accent-orange, #7fc9a8);
+    color: var(--accent-orange, #7fc9a8);
     background: var(--bg-tertiary, #fff8f5);
 }
 
 .category-btn.active {
-    background: linear-gradient(135deg, #fb923c 0%, #ec4899 100%);
+    background: #7fc9a8;
     color: white;
     border-color: transparent;
-    box-shadow: 0 4px 12px rgba(251, 146, 60, 0.3);
+    box-shadow: 0 4px 12px rgba(127, 201, 168, 0.3);
 }
 
 /* Dark mode styling moved to darkMode.css for consistency */
@@ -169,7 +169,7 @@
 }
 
 .sort-select:focus {
-    border-color: var(--accent-orange, #fb923c);
+    border-color: var(--accent-orange, #7fc9a8);
 }
 
 /* Resources Grid - Responsive Auto-fit */
@@ -222,7 +222,7 @@
 .resource-card:hover {
     box-shadow: 0 8px 24px var(--shadow, rgba(0, 0, 0, 0.12));
     transform: translateY(-4px);
-    border-color: var(--accent-orange, #fb923c);
+    border-color: var(--accent-orange, #7fc9a8);
 }
 
 .card-header {
@@ -236,7 +236,7 @@
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background: linear-gradient(135deg, rgba(234, 88, 12, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(127, 201, 168, 0.15) 0%, rgba(127, 201, 168, 0.15) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -248,7 +248,7 @@
 }
 
 .card-icon {
-    color: var(--accent-orange, #ea580c);
+    color: var(--accent-orange, #7fc9a8);
     width: 24px;
     height: 24px;
 }
@@ -287,7 +287,7 @@
 }
 
 .card-footer svg {
-    color: var(--accent-orange, #ea580c);
+    color: var(--accent-orange, #7fc9a8);
     flex-shrink: 0;
 }
 
@@ -386,7 +386,7 @@
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
   background-color: transparent;
-  color: #ea580c;
+  color: #7fc9a8;
   cursor: pointer;
   padding: 18px;
   border: none;
@@ -411,13 +411,13 @@
 }
 
 .collapsible:hover {
-  background-color: rgba(234, 88, 12, 0.1);
+  background-color: rgba(127, 201, 168, 0.1);
   transform: translateY(-2px);
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active {
-  background-color: rgba(234, 88, 12, 0.1);
+  background-color: rgba(127, 201, 168, 0.1);
 }
 
 /* Style the collapsible content. Note: hidden by default */

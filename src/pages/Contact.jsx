@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Clock, Users} from 'lucide-react';
+import PageHero from '../components/PageHero';
 import '../css/contact.css';
 import { db } from '../config/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
@@ -161,13 +162,13 @@ export default function Contact() {
   };
 
   return (
-    <div className="page-container">
-      <div className="contact-hero">
-        <h1>Contact Us</h1>
-        <p>We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.</p>
-      </div>
+    <>
+      <PageHero 
+        title="Contact Us"
+        subtitle="We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+      />
 
-
+      <div className="page-container">
       <div className = "contact-stats">
         <div className="stat-card2">
           <Mail size={32} className="stat-icon" />
@@ -332,6 +333,7 @@ export default function Contact() {
           )}
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

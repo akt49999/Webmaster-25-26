@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, FileText, Link as LinkIcon } from 'lucide-react';
+import PageHero from '../components/PageHero';
 import '../css/pages.css';
 import '../css/references.css';
 
@@ -60,11 +61,11 @@ export default function References() {
   ];
 
   return (
-    <div className="references-page">
-      <div className="references-hero">
-        <h1>References</h1>
-        <p>Sources and documentation for the Coppell Community Hub project.</p>
-      </div>
+    <>
+      <PageHero 
+        title="References"
+        subtitle="Sources and documentation for the Coppell Community Hub project."
+      />
       
       <div className="references-content">
         <div className="content-wrapper">
@@ -75,53 +76,30 @@ export default function References() {
           </div>
           
           <div style={{ marginBottom: '48px' }}>
-            <h2 style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
+            <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '16px', textAlign: 'center' }}>
               <LinkIcon size={24} />
               Information Sources
             </h2>
-            <p style={{ color: '#666', marginBottom: '24px' }}>
+            <p style={{ marginBottom: '24px' }}>
               The following resources were consulted in creating this community directory:
             </p>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div>
               {sources.map((source, index) => (
                 <div 
                   key={index}
-                  style={{
-                    padding: '20px',
-                    border: '1px solid #e0e0e0',
-                    borderRadius: '8px',
-                    backgroundColor: '#fafafa',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = '#007bff';
-                    e.currentTarget.style.backgroundColor = '#f0f8ff';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = '#e0e0e0';
-                    e.currentTarget.style.backgroundColor = '#fafafa';
-                  }}
+                  className="reference-card"
                 >
-                  <h3 style={{ margin: '0 0 8px 0', fontSize: '18px', color: '#333' }}>
+                  <h3>
                     {source.name}
                   </h3>
-                  <p style={{ margin: '0 0 12px 0', color: '#666', fontSize: '14px' }}>
+                  <p>
                     {source.description}
                   </p>
                   <a 
                     href={source.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      color: '#007bff',
-                      textDecoration: 'none',
-                      fontSize: '14px',
-                      fontWeight: '500'
-                    }}
                   >
                     Visit Website
                     <ExternalLink size={14} />
@@ -132,53 +110,30 @@ export default function References() {
           </div>
 
           <div>
-            <h2 style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
+            <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '16px', textAlign: 'center' }}>
               <FileText size={24} />
               Project Documentation
             </h2>
-            <p style={{ color: '#666', marginBottom: '24px' }}>
+            <p style={{ marginBottom: '24px' }}>
               Competition submission documents and project records:
             </p>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div>
               {documents.map((doc, index) => (
                 <div 
                   key={index}
-                  style={{
-                    padding: '20px',
-                    border: '1px solid #e0e0e0',
-                    borderRadius: '8px',
-                    backgroundColor: '#fafafa',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = '#28a745';
-                    e.currentTarget.style.backgroundColor = '#f0fff4';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = '#e0e0e0';
-                    e.currentTarget.style.backgroundColor = '#fafafa';
-                  }}
+                  className="reference-card"
                 >
-                  <h3 style={{ margin: '0 0 8px 0', fontSize: '18px', color: '#333' }}>
+                  <h3>
                     {doc.name}
                   </h3>
-                  <p style={{ margin: '0 0 12px 0', color: '#666', fontSize: '14px' }}>
+                  <p>
                     {doc.description}
                   </p>
                   <a 
                     href={`/${doc.filename}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      color: '#28a745',
-                      textDecoration: 'none',
-                      fontSize: '14px',
-                      fontWeight: '500'
-                    }}
                   >
                     <FileText size={14} />
                     View PDF
@@ -189,50 +144,27 @@ export default function References() {
           </div>
 
           <div>
-            <h2 style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
+            <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '16px', textAlign: 'center' }}>
               <LinkIcon size={24} />
               Citations
             </h2>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <div>
               {citations.map((cite, index) => (
                 <div 
                   key={index}
-                  style={{
-                    padding: '20px',
-                    border: '1px solid #e0e0e0',
-                    borderRadius: '8px',
-                    backgroundColor: '#fafafa',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = '#007bff';
-                    e.currentTarget.style.backgroundColor = '#f0f8ff';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = '#e0e0e0';
-                    e.currentTarget.style.backgroundColor = '#fafafa';
-                  }}
+                  className="reference-card"
                 >
-                  <h3 style={{ margin: '0 0 8px 0', fontSize: '18px', color: '#333' }}>
+                  <h3>
                     {cite.name}
                   </h3>
-                  <p style={{ margin: '0 0 12px 0', color: '#666', fontSize: '14px' }}>
+                  <p>
                     {cite.description}
                   </p>
                   <a 
                     href={cite.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      color: '#007bff',
-                      textDecoration: 'none',
-                      fontSize: '14px',
-                      fontWeight: '500'
-                    }}
                   >
                     Visit Website
                     <ExternalLink size={14} />
@@ -244,6 +176,6 @@ export default function References() {
 
         </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -436,7 +436,7 @@
 
 .category-badge[data-category="housing"] {
   background: #d1d5db;
-  color: #374151;
+  color: #555555;
 }
 
 .dark-mode .category-badge[data-category="health"] {

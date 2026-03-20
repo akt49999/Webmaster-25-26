@@ -23,21 +23,20 @@
 }
 
 .bg-layer-1 {
-    background: linear-gradient(135deg, #ea580c 0%, #f97316 50%, #ec4899 100%);
+    background: white;
     will-change: transform;
     animation: parallax-1 20s ease-in-out infinite;
 }
 
 .bg-layer-2 {
-    background: linear-gradient(45deg, #9333ea 0%, #ec4899 50%, #ea580c 100%);
-    opacity: 0.6;
+    background: white;
+    opacity: 1;
     will-change: transform;
     animation: parallax-2 25s ease-in-out infinite;
 }
 
 .bg-layer-3 {
-    background: radial-gradient(circle at 30% 70%, rgba(233, 88, 12, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 70% 30%, rgba(147, 51, 234, 0.3) 0%, transparent 50%);
+    background: none;
     will-change: transform;
     animation: parallax-3 30s ease-in-out infinite;
 }
@@ -66,6 +65,7 @@
     opacity: 0.15;
     will-change: transform;
     z-index: 1;
+    display: none;
 }
 
 .blob-1 {
@@ -116,13 +116,8 @@
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom right,
-        rgba(234, 88, 12, 0.85),
-        rgba(236, 72, 153, 0.85),
-        rgba(147, 51, 234, 0.85)
-    );
-    backdrop-filter: blur(2px);
+    background: white;
+    backdrop-filter: none;
     z-index: 2;
 }
 
@@ -147,14 +142,14 @@
     justify-content: center;
     width: 80px;
     height: 80px;
-    background: rgba(255, 255, 255, 0.15);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(127, 201, 168, 0.1);
+    border: 2px solid rgba(127, 201, 168, 0.3);
     border-radius: 50%;
     backdrop-filter: blur(10px);
 }
 
 .hero-icon {
-    color: white;
+    color: #7fc9a8;
     animation: rotate-icon 20s linear infinite;
 }
 
@@ -170,7 +165,7 @@
 
 /* Reveal Animations for Text */
 .hero-title {
-    color: white;
+    color: #7fc9a8;
     margin-bottom: clamp(16px, 3vw, 24px);
     font-size: clamp(32px, 6vw, 48px);
     font-weight: 700;
@@ -179,7 +174,7 @@
 }
 
 .hero-description {
-    color: rgba(255, 255, 255, 0.95);
+    color: #7fc9a8;
     font-size: clamp(15px, 2vw, 18px);
     max-width: 768px;
     margin: 0 auto clamp(24px, 4vw, 40px);
@@ -247,8 +242,8 @@
 }
 
 .btn-explore {
-    background: transparent;
-    border: 2px solid white;
+    background: #7fc9a8;
+    border: 2px solid #7fc9a8;
     color: white;
     padding: 14px 28px;
     min-width: 180px;
@@ -260,7 +255,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
     border-radius: 9999px;
     pointer-events: none;
     z-index: 0;
@@ -283,18 +278,19 @@
 
 .btn-explore:hover {
     background: white;
-    color: #ea580c;
-    box-shadow: 0 20px 50px rgba(234, 88, 12, 0.4);
+    border-color: #7fc9a8;
+    color: #7fc9a8;
+    box-shadow: 0 20px 50px rgba(127, 201, 168, 0.4);
     transform: translateY(-4px);
 }
 
 .btn-explore:hover .btn-text {
-    color: #ea580c;
+    color: #7fc9a8;
 }
 
 .btn-explore:hover .arrow-icon {
     transform: translateX(8px);
-    color: #ea580c;
+    color: #7fc9a8;
 }
 
 .btn-explore.loading {
@@ -316,8 +312,8 @@
     position: absolute;
     width: 18px;
     height: 18px;
-    border: 2px solid rgba(234, 88, 12, 0.3);
-    border-top: 2px solid #ea580c;
+    border: 2px solid rgba(127, 201, 168, 0.3);
+    border-top: 2px solid #7fc9a8;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -329,8 +325,8 @@
 
 /* Secondary Button - Submit */
 .btn-submit {
-    background: transparent;
-    border: 2px solid white;
+    background: #7fc9a8;
+    border: 2px solid #7fc9a8;
     color: white;
     padding: 14px 28px;
     min-width: 180px;
@@ -349,7 +345,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
     border-radius: 9999px;
     pointer-events: none;
     z-index: 0;
@@ -357,14 +353,14 @@
 
 .btn-submit:hover {
     background: white;
-    color: #ea580c;
-    border-color: white;
-    box-shadow: 0 20px 50px rgba(234, 88, 12, 0.4);
+    color: #7fc9a8;
+    border-color: #7fc9a8;
+    box-shadow: 0 20px 50px rgba(127, 201, 168, 0.4);
     transform: translateY(-4px);
 }
 
 .btn-submit:hover span {
-    color: #ea580c;
+    color: #7fc9a8;
 }
 
 /* Stats Section */
@@ -393,11 +389,11 @@
 
 /* Staggered Stat Cards */
 .stat-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(127, 201, 168, 0.08);
     backdrop-filter: blur(8px);
     border-radius: 16px;
     padding: 24px 40px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(127, 201, 168, 0.2);
     text-align: center;
     min-width: 180px;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
@@ -409,7 +405,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+    background: linear-gradient(135deg, rgba(127, 201, 168, 0.1), transparent);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -438,10 +434,10 @@
 }
 
 .stat-card:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(127, 201, 168, 0.12);
+    border-color: rgba(127, 201, 168, 0.35);
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgba(127, 201, 168, 0.15);
 }
 
 .stat-card:hover::before {
@@ -449,7 +445,7 @@
 }
 
 .stat-number {
-    color: white !important;
+    color: #7fc9a8 !important;
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 8px;
@@ -458,7 +454,7 @@
 }
 
 .hero-section .stat-label {
-    color: white !important;
+    color: #7fc9a8 !important;
     font-size: 14px;
     text-align: center;
 }
@@ -481,7 +477,7 @@
 .scroll-dot {
     width: 24px;
     height: 40px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(127, 201, 168, 0.5);
     border-radius: 9999px;
     display: flex;
     align-items: flex-start;
@@ -494,7 +490,7 @@
     content: '';
     width: 6px;
     height: 6px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(127, 201, 168, 0.7);
     border-radius: 50%;
     animation: scroll-bounce 1.6s ease-in-out infinite;
 }
@@ -521,20 +517,70 @@
 
 /* Dark Mode Support */
 :root[data-theme='dark'] .hero-overlay {
-    background: linear-gradient(to bottom right, #0f172a, #1e293b);
+    background: #1a1a2a;
+    backdrop-filter: blur(2px);
 }
 
 :root[data-theme='dark'] .bg-layer-1 {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1a2a4e 100%);
+    background: transparent;
 }
 
 :root[data-theme='dark'] .bg-layer-2 {
-    background: linear-gradient(45deg, #1a2a4e 0%, #1e293b 50%, #0f172a 100%);
+    background: transparent;
+    opacity: 0.6;
 }
 
 :root[data-theme='dark'] .bg-layer-3 {
     background: radial-gradient(circle at 30% 70%, rgba(30, 58, 138, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 70% 30%, rgba(15, 23, 42, 0.1) 0%, transparent 50%);
+}
+
+:root[data-theme='dark'] .animated-blob {
+    display: block;
+}
+
+:root[data-theme='dark'] .hero-icon-wrapper {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+:root[data-theme='dark'] .hero-icon {
+    color: white;
+}
+
+:root[data-theme='dark'] .hero-title {
+    color: white;
+}
+
+:root[data-theme='dark'] .hero-description {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+:root[data-theme='dark'] .stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+:root[data-theme='dark'] .stat-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme='dark'] .stat-number {
+    color: white !important;
+}
+
+:root[data-theme='dark'] .hero-section .stat-label {
+    color: white !important;
+}
+
+:root[data-theme='dark'] .scroll-dot {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+:root[data-theme='dark'] .scroll-dot::before {
+    background: rgba(255, 255, 255, 0.7);
 }
 
 @media (max-width: 768px) {

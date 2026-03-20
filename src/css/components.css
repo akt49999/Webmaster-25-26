@@ -48,8 +48,8 @@
 }
 
 .search-input:focus {
-  border-color: var(--accent-orange, #fb923c);
-  box-shadow: 0 4px 12px rgba(251, 146, 60, 0.2);
+  border-color: var(--accent-orange, #7fc9a8);
+  box-shadow: 0 4px 12px rgba(127, 201, 168, 0.2);
 }
 
 .search-input::placeholder {
@@ -71,24 +71,24 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--text-secondary, #6b7280);
+  color: var(--text-secondary, #555555);
   transition: all 0.2s ease;
   padding: 0;
 }
 
 .search-clear-btn:hover {
-  background: var(--accent-orange, #fb923c);
+  background: var(--accent-orange, #7fc9a8);
   color: white;
   transform: translateY(-50%) scale(1.1);
 }
 
 .dark .search-clear-btn {
-  background: #334155;
+  background: #1e1e1e;
   color: #94a3b8;
 }
 
 .dark .search-clear-btn:hover {
-  background: #ff6b4a;
+  background: #81c784;
   color: white;
 }
 
@@ -98,14 +98,14 @@
 }
 
 .dark .search-input {
-  background: #1e293b;
-  border-color: #334155;
+  background: #1e1e1e;
+  border-color: #1e1e1e;
   color: #e2e8f0;
 }
 
 .dark .search-input:focus {
-  border-color: #ff6b4a;
-  box-shadow: 0 4px 12px rgba(255, 107, 74, 0.2);
+  border-color: #81c784;
+  box-shadow: 0 4px 12px rgba(129, 199, 132, 0.2);
 }
 
 .dark .search-input::placeholder {
@@ -154,35 +154,35 @@
 .category-btn:nth-child(8) { animation-delay: 0.48s; }
 
 .category-btn:hover {
-  border-color: var(--accent-orange, #fb923c);
-  color: var(--accent-orange, #fb923c);
+  border-color: var(--accent-orange, #7fc9a8);
+  color: var(--accent-orange, #7fc9a8);
   background: var(--bg-tertiary, #fff8f5);
 }
 
 .category-btn.active {
-  background: linear-gradient(135deg, #fb923c 0%, #ec4899 100%);
+  background: #7fc9a8;
   color: white;
   border-color: transparent;
-  box-shadow: 0 4px 12px rgba(251, 146, 60, 0.3);
+  box-shadow: 0 4px 12px rgba(127, 201, 168, 0.3);
 }
 
 .dark .category-btn {
-  background: #1e293b;
-  border-color: #334155;
-  color: #cbd5e1;
+  background: #1e1e1e;
+  border-color: #1e1e1e;
+  color: #e0e0e0;
 }
 
 .dark .category-btn:hover {
-  border-color: #ff6b4a;
-  color: #ff8c42;
-  background: #334155;
+  border-color: #81c784;
+  color: #81c784;
+  background: #1e1e1e;
 }
 
 .dark .category-btn.active {
-  background: linear-gradient(135deg, #ff6b4a 0%, #ff8c42 100%);
+  background: #81c784;
   color: white;
   border-color: transparent;
-  box-shadow: 0 4px 12px rgba(255, 107, 74, 0.3);
+  box-shadow: 0 4px 12px rgba(129, 199, 132, 0.3);
 }
 
 /* Category Count Badge */
@@ -196,14 +196,14 @@
   font-size: 11px;
   font-weight: 600;
   background: var(--bg-tertiary, #f3f4f6);
-  color: var(--text-secondary, #6b7280);
+  color: var(--text-secondary, #555555);
   border-radius: 10px;
   transition: all 0.2s ease;
 }
 
 .category-btn:hover .category-count {
-  background: rgba(251, 146, 60, 0.2);
-  color: var(--accent-orange, #fb923c);
+  background: rgba(127, 201, 168, 0.2);
+  color: var(--accent-orange, #7fc9a8);
 }
 
 .category-btn.active .category-count {
@@ -212,13 +212,13 @@
 }
 
 .dark .category-count {
-  background: #334155;
+  background: #1e1e1e;
   color: #94a3b8;
 }
 
 .dark .category-btn:hover .category-count {
-  background: rgba(255, 107, 74, 0.2);
-  color: #ff8c42;
+  background: rgba(129, 199, 132, 0.2);
+  color: #81c784;
 }
 
 .dark .category-btn.active .category-count {
@@ -251,17 +251,17 @@
 }
 
 .sort-select:focus {
-  border-color: var(--accent-orange, #fb923c);
+  border-color: var(--accent-orange, #7fc9a8);
 }
 
 .dark .sort-select {
-  background: #1e293b;
-  border-color: #334155;
+  background: #1e1e1e;
+  border-color: #1e1e1e;
   color: #e2e8f0;
 }
 
 .dark .sort-select:focus {
-  border-color: #ff6b4a;
+  border-color: #81c784;
 }
 
 /* ============================================

@@ -73,7 +73,7 @@ body {
   font-size: var(--text-base);
   font-weight: var(--font-normal);
   line-height: var(--line-height-normal);
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
   background-color: var(--bg-primary, #ffffff);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -94,7 +94,7 @@ h1 {
   letter-spacing: var(--letter-spacing-wider);
   margin-top: 0;
   margin-bottom: 1rem;
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
 }
 
 /* Primary Heading - Large (48px) */
@@ -107,7 +107,7 @@ h2 {
   letter-spacing: var(--letter-spacing-wide);
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
 }
 
 /* Secondary Heading - Medium (36px) */
@@ -120,7 +120,7 @@ h3 {
   letter-spacing: var(--letter-spacing-wide);
   margin-top: 1.5rem;
   margin-bottom: 0.875rem;
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
 }
 
 /* Tertiary Heading - Small (24px) */
@@ -133,7 +133,7 @@ h4 {
   letter-spacing: var(--letter-spacing-normal);
   margin-top: 1.25rem;
   margin-bottom: 0.75rem;
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
 }
 
 /* Subheading - Extra Small (20px) */
@@ -146,7 +146,7 @@ h5 {
   letter-spacing: var(--letter-spacing-normal);
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
 }
 
 /* Micro Heading (16px) */
@@ -158,7 +158,7 @@ h6 {
   letter-spacing: var(--letter-spacing-normal);
   margin-top: 0.75rem;
   margin-bottom: 0.5rem;
-  color: var(--text-primary, #1f2937);
+  color: var(--text-primary, #2e7d32);
   text-transform: uppercase;
   font-size: 0.875rem;
 }
@@ -174,7 +174,7 @@ p {
   line-height: var(--line-height-relaxed);
   margin-top: 0;
   margin-bottom: 1rem;
-  color: var(--text-secondary, #4b5563);
+  color: var(--text-secondary, #555555);
 }
 
 /* Large Body Text (18px) */
@@ -472,7 +472,7 @@ hr {
 .dark .heading-secondary,
 .dark .heading-tertiary,
 .dark .heading-quaternary {
-  color: var(--text-primary, #f1f5f9);
+  color: var(--text-primary, #81c784);
 }
 
 .dark p,
@@ -480,18 +480,18 @@ hr {
 .dark .paragraph-xl,
 .dark .paragraph-sm,
 .dark .paragraph-xs {
-  color: var(--text-secondary, #cbd5e1);
+  color: var(--text-secondary, #e0e0e0);
 }
 
 .dark blockquote {
-  border-left-color: var(--text-primary, #f1f5f9);
+  border-left-color: var(--text-primary, #81c784);
   background-color: var(--bg-secondary);
-  color: var(--text-secondary, #cbd5e1);
+  color: var(--text-secondary, #e0e0e0);
 }
 
 .dark code {
-  background-color: var(--bg-tertiary, #334155);
-  color: var(--text-primary, #f1f5f9);
+  background-color: var(--bg-tertiary, #1e1e1e);
+  color: var(--text-primary, #81c784);
 }
 
 .dark a {
