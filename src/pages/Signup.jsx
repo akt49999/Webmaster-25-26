@@ -156,6 +156,7 @@ export default function Signup() {
                                     value={firstName}
                                     onChange={(e) => handleFieldChange('firstName', e.target.value, setFirstName)}
                                     className={`form-input ${fieldErrors.firstName ? 'error' : ''}`}
+                                    spellCheck="false"
                                 />
                             </div>
                             {fieldErrors.firstName && <span className="field-error">{fieldErrors.firstName}</span>}
@@ -172,6 +173,7 @@ export default function Signup() {
                                     value={lastName}
                                     onChange={(e) => handleFieldChange('lastName', e.target.value, setLastName)}
                                     className={`form-input ${fieldErrors.lastName ? 'error' : ''}`}
+                                    spellCheck="false"
                                 />
                             </div>
                             {fieldErrors.lastName && <span className="field-error">{fieldErrors.lastName}</span>}
@@ -189,6 +191,7 @@ export default function Signup() {
                                 value={email}
                                 onChange={(e) => handleFieldChange('email', e.target.value, setEmail)}
                                 className={`form-input ${fieldErrors.email ? 'error' : ''}`}
+                                spellCheck="false"
                             />
                         </div>
                         {fieldErrors.email && <span className="field-error">{fieldErrors.email}</span>}
@@ -205,6 +208,7 @@ export default function Signup() {
                                 value={password}
                                 onChange={(e) => handleFieldChange('password', e.target.value, setPassword)}
                                 className={`form-input ${fieldErrors.password ? 'error' : ''}`}
+                                spellCheck="false"
                             />
                             {/* Button to toggle password visibility */}
                             <button
@@ -230,6 +234,7 @@ export default function Signup() {
                                 value={confirmPassword}
                                 onChange={(e) => handleFieldChange('confirmPassword', e.target.value, setConfirmPassword)}
                                 className={`form-input ${fieldErrors.confirmPassword ? 'error' : ''}`}
+                                spellCheck="false"
                             />
                             {/* Button to toggle password visibility */}
                             <button

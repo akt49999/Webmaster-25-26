@@ -124,6 +124,7 @@ export default function ResourceForm(){
                 required
                 maxLength={100}
                 disabled={isSubmitting}
+                spellCheck="false"
               />
             </div>
 
@@ -139,6 +140,7 @@ export default function ResourceForm(){
                 required
                 maxLength={100}
                 disabled={isSubmitting}
+                spellCheck="false"
               />
             </div>
           </div>
@@ -155,6 +157,7 @@ export default function ResourceForm(){
               required
               maxLength={200}
               disabled={isSubmitting}
+              spellCheck="false"
             />
           </div>
 
@@ -169,6 +172,7 @@ export default function ResourceForm(){
               placeholder="https://example.com or (555) 000-0000"
               required
               disabled={isSubmitting}
+              spellCheck="false"
             />
           </div>
 
@@ -205,6 +209,7 @@ export default function ResourceForm(){
               required
               maxLength={5000}
               disabled={isSubmitting}
+              spellCheck="false"
             ></textarea>
             <div className="char-count">{formData.description.length}/5000</div>
           </div>

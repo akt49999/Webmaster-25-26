@@ -195,6 +195,7 @@ export default function Login() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="form-input"
+                    spellCheck="false"
                   />
                 </div>
               </div>
@@ -211,6 +212,7 @@ export default function Login() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="form-input"
+                    spellCheck="false"
                   />
                   {/* Button to toggle password visibility */}
                   <button
@@ -320,6 +322,7 @@ export default function Login() {
                       value={forgotEmail}
                       onChange={(e) => setForgotEmail(e.target.value)}
                       className="form-input"
+                      spellCheck="false"
                     />
                   </div>
                 </div>

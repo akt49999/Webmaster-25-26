@@ -248,6 +248,7 @@ export default function Contact() {
                     placeholder="Your name"
                     maxLength="100"
                     className={fieldErrors.name ? 'error' : ''}
+                    spellCheck="false"
                   />
                   {fieldErrors.name && <span className="field-error">{fieldErrors.name}</span>}
                 </div>
@@ -263,6 +264,7 @@ export default function Contact() {
                     placeholder="your.email@example.com"
                     maxLength="100"
                     className={fieldErrors.email ? 'error' : ''}
+                    spellCheck="false"
                   />
                   {fieldErrors.email && <span className="field-error">{fieldErrors.email}</span>}
                 </div>
@@ -280,6 +282,7 @@ export default function Contact() {
                     placeholder="(XXX) XXX-XXXX"
                     maxLength="20"
                     className={fieldErrors.phone ? 'error' : ''}
+                    spellCheck="false"
                   />
                   {fieldErrors.phone && <span className="field-error">{fieldErrors.phone}</span>}
                   {formData.phone && !fieldErrors.phone && (
@@ -298,6 +301,7 @@ export default function Contact() {
                     placeholder="How can we help?"
                     maxLength="100"
                     className={fieldErrors.subject ? 'error' : ''}
+                    spellCheck="false"
                   />
                   {fieldErrors.subject && <span className="field-error">{fieldErrors.subject}</span>}
                 </div>
@@ -314,6 +318,7 @@ export default function Contact() {
                   rows="6"
                   maxLength="5000"
                   className={fieldErrors.message ? 'error' : ''}
+                  spellCheck="false"
                 />
                 {fieldErrors.message && <span className="field-error">{fieldErrors.message}</span>}
                 <div className="char-count">
