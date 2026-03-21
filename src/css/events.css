@@ -58,7 +58,7 @@
 .view-all-btn {
     padding: 8px 24px;
     background: white;
-    border: 1px solid #fed7aa;
+    border: 1px solid grey;
     border-radius: 9999px;
     color: #7fc9a8;
     font-weight: 500;
@@ -69,7 +69,6 @@
 
 .dark .view-all-btn {
     background: #1e1e1e;
-    border-color: #81c784;
     color: #81c784;
 }
 
