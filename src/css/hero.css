@@ -277,20 +277,14 @@
 }
 
 .btn-explore:hover {
-    background: white;
     border-color: #7fc9a8;
-    color: #7fc9a8;
     box-shadow: 0 20px 50px rgba(127, 201, 168, 0.4);
     transform: translateY(-4px);
 }
 
-.btn-explore:hover .btn-text {
-    color: #7fc9a8;
-}
 
 .btn-explore:hover .arrow-icon {
     transform: translateX(8px);
-    color: #7fc9a8;
 }
 
 .btn-explore.loading {
@@ -352,16 +346,11 @@
 }
 
 .btn-submit:hover {
-    background: white;
-    color: #7fc9a8;
     border-color: #7fc9a8;
     box-shadow: 0 20px 50px rgba(127, 201, 168, 0.4);
     transform: translateY(-4px);
 }
 
-.btn-submit:hover span {
-    color: #7fc9a8;
-}
 
 /* Stats Section */
 .hero-stats {
