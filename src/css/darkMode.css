@@ -1234,9 +1234,8 @@
 }
 
 .dark .cta-btn-secondary{
-  background: transparent !important;
-  color: #7fc9a8 !important;
-  border: 2px solid #7fc9a8 !important;
+  background: #7fc9a8 !important;
+  color: white !important;
 }
 
 .dark .blog-newsletter-title{
