@@ -194,15 +194,28 @@
 
 .dark .forum-category-btn {
   color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(129, 199, 132, 0.2);
 }
 
 .dark .forum-category-btn:hover {
-  background: var(--bg-tertiary);
+  background: rgba(129, 199, 132, 0.12) !important;
 }
 
 .forum-category-btn.active {
   background: var(--btn-gradient);
   color: white;
+}
+
+.dark .forum-category-btn.active {
+  background: #81c784 !important;
+  border-color: #81c784;
+  color: #121212;
+}
+
+.dark .forum-category-btn.active .forum-category-count {
+  background: #2e7d32;
+  color: #ffffff;
 }
 
 .forum-category-left {
@@ -314,16 +327,20 @@
   border: none;
   background: transparent;
   font-size: 1rem;
-  color: var(--text-primary);
+  color: #000000;
   outline: none;
 }
 
 .dark .forum-search input {
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
 .forum-search input::placeholder {
-  color: #94a3b8;
+  color: var(--text-tertiary);;
+}
+
+.dark .forum-search input::placeholder {
+  color: var(--text-tertiary);
 }
 
 .forum-new-topic-btn {
@@ -667,6 +684,11 @@
   color: var(--text-tertiary);
 }
 
+.dark .forum-stat-btn {
+  background: transparent !important;
+  border-color: transparent;
+}
+
 .forum-stat-btn {
   background: none;
   border: none;
@@ -687,6 +709,15 @@
 
 .forum-stat-btn.liked {
   color: var(--accent-orange);
+  background: transparent;
+}
+
+.forum-stat-btn.liked:hover {
+  background: transparent;
+}
+
+.dark .forum-stat-btn.liked:hover {
+  background: transparent;
 }
 
 .forum-topic-actions {
@@ -812,11 +843,13 @@
 .dark .forum-add-option-btn {
   border-color: var(--border-color);
   color: var(--text-tertiary);
+  background: transparent !important;
 }
 
 .dark .forum-add-option-btn:hover {
-  border-color: #f472b6;
-  color: #f472b6;
+  border-color: var(--border-color);
+  color: #81c784;
+  background: transparent !important;
 }
 
 .forum-polls-list {
@@ -905,10 +938,12 @@
 
 .dark .forum-poll-option {
   border-color: var(--border-color);
+  background: transparent !important;
 }
 
 .dark .forum-poll-option:hover {
   border-color: #81c784;
+  background: transparent !important;
 }
 
 .forum-poll-option.selected {
@@ -930,11 +965,12 @@
 
 .dark .forum-poll-option.selected {
   border-color: #81c784;
-  background: rgba(129, 199, 132, 0.15);
+  background: transparent !important;
 }
 
 .dark .forum-poll-option.voted:not(.selected):hover {
   border-color: var(--border-color);
+  background: transparent !important;
 }
 
 .forum-poll-progress {
@@ -948,7 +984,7 @@
 }
 
 .dark .forum-poll-progress {
-  background: rgba(129, 199, 132, 0.15);
+  background: transparent;
 }
 
 .forum-poll-option-content {
@@ -1161,10 +1197,11 @@
 
 .dark .forum-modal-close {
   color: var(--text-tertiary);
+  background: transparent !important;
 }
 
 .dark .forum-modal-close:hover {
-  background: var(--bg-tertiary);
+  background: transparent !important;
   color: white;
 }
 

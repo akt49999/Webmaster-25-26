@@ -15,8 +15,7 @@
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
+  border: none !important;
   border-radius: 8px;
   color: var(--text-secondary);
   font-size: 0.95rem;
@@ -28,6 +27,11 @@
 .new-topic-back-btn:hover {
   background: var(--bg-tertiary);
   color: var(--text-primary);
+}
+
+.dark .new-topic-back-btn {
+  background: none !important;
+  border: none !important;
 }
 
 .new-topic-header {
@@ -74,7 +78,7 @@
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 10px;
-  color: var(--text-primary);
+  color: black;
   font-size: 1rem;
   transition: all 0.2s ease;
 }
@@ -166,6 +170,10 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.dark .new-topic-btn-secondary {
+  background: none !important;
 }
 
 .new-topic-btn-primary {
