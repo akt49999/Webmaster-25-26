@@ -107,7 +107,7 @@
   left: 14px;
   top: 50%;
   transform: translateY(-50%);
-  color: #94a3b8;
+  color: #000000;
   pointer-events: none;
   flex-shrink: 0;
 }
@@ -121,7 +121,7 @@
   transition: all 0.3s ease;
   box-sizing: border-box;
   background: #ffffff;
-  color: #81c784;
+  color: #000000;
 }
 
 .form-input:focus {
@@ -135,7 +135,7 @@
 .form-input:-webkit-autofill:hover,
 .form-input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
-  -webkit-text-fill-color: #81c784 !important;
+  -webkit-text-fill-color: #000000 !important;
   transition: background-color 5000s ease-in-out;
 }
 
@@ -147,7 +147,7 @@
 .dark .form-input:-webkit-autofill:hover,
 .dark .form-input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 30px #121212 inset !important;
-  -webkit-text-fill-color: #81c784 !important;
+  -webkit-text-fill-color: #ffffff !important;
   transition: background-color 5000s ease-in-out;
 }
 
@@ -156,7 +156,8 @@
 }
 
 .form-input::placeholder {
-  color: #81c784;
+  color: #000000;
+  opacity: 1;
 }
 
 .password-toggle {
@@ -170,12 +171,12 @@
   justify-content: center;
   padding: 0;
   transition: color 0.3s ease;
-  color: var(--text-primary, #2e7d32);
+  color: #000000;
 }
 
 .dark .password-toggle {
   background: none !important;
-  color: #81c784 !important;
+  color: #ffffff !important;
 }
 
 /* Icon color change on hover */
@@ -348,7 +349,7 @@
 .dark .form-input {
   background: var(--bg-primary);
   border-color: var(--border-color);
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
 .dark .form-input:focus {
@@ -357,15 +358,15 @@
 }
 
 .dark .form-input::placeholder {
-  color: #81c784 !important;
+  color: #ffffff !important;
 }
 
 .dark .input-icon {
-  color: var(--text-tertiary);
+  color: #ffffff;
 }
 
 .dark .password-toggle {
-  color: var(--text-tertiary);
+  color: #ffffff;
 }
 
 .dark .password-toggle:hover {

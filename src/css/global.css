@@ -33,3 +33,32 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     font-family: 'Outfit', system-ui, -apple-system, sans-serif;
 }
+
+form input:not([type='checkbox']):not([type='radio']),
+form textarea,
+form select {
+    color: #000000;
+}
+
+form input:not([type='checkbox']):not([type='radio'])::placeholder,
+form textarea::placeholder {
+    color: #000000;
+    opacity: 1;
+}
+
+form .input-icon,
+form .password-toggle {
+    color: #000000;
+}
+
+form input:-webkit-autofill,
+form input:-webkit-autofill:hover,
+form input:-webkit-autofill:focus,
+form textarea:-webkit-autofill,
+form textarea:-webkit-autofill:hover,
+form textarea:-webkit-autofill:focus,
+form select:-webkit-autofill,
+form select:-webkit-autofill:hover,
+form select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #000000 !important;
+}
