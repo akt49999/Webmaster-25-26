@@ -17,7 +17,7 @@ export default function MovingHomeStrip() {
 
   return (
     <div className="ticker">
-      <Marquee speed = {80} pauseOnHover = {true} direction = {"right"}>
+      <Marquee speed = {80} pauseOnHover = {false} direction = {"right"}>
         {resources.map((item, i) => (
           <span key={i} className="ticker-item">
             {item}
