@@ -336,9 +336,14 @@
   transition: all 200ms ease;
 }
 
-.events-register-button:hover {
+.events-register-button:hover:not(:disabled) {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
+}
+
+.events-register-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .events-save-button {

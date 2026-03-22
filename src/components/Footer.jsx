@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import '../css/footer.css';
 
 export default function Footer() {
@@ -90,17 +90,7 @@ export default function Footer() {
               </li>
             </ul>
 
-            <div className="social-row">
-              <a href="#" className="social-btn">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="social-btn">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="social-btn">
-                <Instagram size={18} />
-              </a>
-            </div>
+            {/* Social media links - implement with real URLs when accounts are created */}
           </div>
         </div>
 

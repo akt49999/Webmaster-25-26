@@ -52,11 +52,10 @@ export default function Events() {
   };
 
   const handleRegister = (event) => {
-    // Open registration URL in a new tab if available; otherwise show placeholder alert
+    // Open registration URL in a new tab
     const site = event.website && typeof event.website === 'string' ? event.website.trim() : '';
     if (!site) {
-      alert(`Registration for "${event.name}" coming soon! Check back later.`);
-      return;
+      return; // Button is disabled when no website; this shouldn't be reached
     }
 
     const url = site.startsWith('http://') || site.startsWith('https://') ? site : `https://${site}`;
@@ -138,6 +137,8 @@ export default function Events() {
                   <button 
                     className="events-register-button"
                     onClick={() => handleRegister(event)}
+                    disabled={!event.website}
+                    title={event.website ? 'Get more information' : 'Registration link not available'}
                   >
                     More Info
                   </button>

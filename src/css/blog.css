@@ -56,6 +56,22 @@
   padding: clamp(32px, 5vw, 48px) clamp(16px, 4vw, 32px);
 }
 
+.blog-container .category-filters,
+.blog-container .sort-wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.blog-container .category-filters {
+  justify-content: flex-start;
+}
+
+.blog-actions-bar .search-wrapper {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* Search Wrapper */
 .search-wrapper {
     display: flex;
