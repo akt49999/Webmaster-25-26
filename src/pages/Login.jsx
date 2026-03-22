@@ -30,7 +30,6 @@ export default function Login() {
     const savedEmail = localStorage.getItem('rememberEmail');
     if (savedRememberMe && savedEmail) {
       setEmail(savedEmail);
-      setRememberMe(true);
     }
   }, []);
 
