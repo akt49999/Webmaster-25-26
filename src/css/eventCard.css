@@ -188,6 +188,6 @@
 
 /* Dark mode support */
 .dark .event-card {
-    background: var(--card-bg, #2e7d32);
-    border-color: var(--border-color, #555555);
+    background: var(--card-bg, #1e1e1e);
+    border-color: var(--border-color, #404040);
 }

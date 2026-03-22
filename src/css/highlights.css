@@ -122,7 +122,7 @@
 }
 
 .highlight-btn-rose-pink {
-    background: #7fc9a8;
+    background: #7fddbb;
     color: white;
 }
 
@@ -176,12 +176,17 @@
 }
 
 .highlight-btn-rose-pink:hover {
-    box-shadow: 0 10px 20px rgba(127, 201, 168, 0.3);
+    box-shadow: 0 10px 20px rgba(127, 221, 187, 0.3);
     transform: translateY(-2px);
 }
 
 .highlight-btn-blue-cyan {
     background: #7fddbb;
+    color: white;
+}
+
+.dark .highlight-btn-blue-cyan {
+    background: #388e71;
     color: white;
 }
 
@@ -191,12 +196,17 @@
 }
 
 .highlight-btn-amber-orange {
-    background: #8fe0c6;
+    background: #7fddbb;
+    color: white;
+}
+
+.dark .highlight-btn-amber-orange {
+    background: #388e71;
     color: white;
 }
 
 .highlight-btn-amber-orange:hover {
-    box-shadow: 0 10px 20px rgba(143, 224, 198, 0.3);
+    box-shadow: 0 10px 20px rgba(127, 221, 187, 0.3);
     transform: translateY(-2px);
 }
 

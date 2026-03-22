@@ -36,12 +36,12 @@
 
 /* Dark mode styles */
 .dark .dark-mode-toggle {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, #7fc9a8 0%, #6fdd9d 100%);
+  box-shadow: 0 8px 24px rgba(127, 201, 168, 0.3);
 }
 
 .dark .dark-mode-toggle:hover {
-  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 12px 32px rgba(127, 201, 168, 0.4);
 }
 
 @media (max-width: 768px) {

@@ -47,14 +47,14 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #7fc9a8 0%, #6fdd9d 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 32px;
   font-weight: bold;
   color: white;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(127, 201, 168, 0.4);
 }
 
 .profile-avatar-label {
@@ -96,7 +96,7 @@
 .profile-account-type {
   margin: 0.5rem 0 0 0;
   font-size: 13px;
-  color: #667eea;
+  color: #7fc9a8;
   font-weight: 500;
 }
 
@@ -124,15 +124,15 @@
 }
 
 .profile-alert.error {
-  background-color: #fef2f2;
-  color: #991b1b;
-  border: 1px solid #fecaca;
+  background-color: #f0fdf7;
+  color: #1e3a1f;
+  border: 1px solid #c6f6d5;
 }
 
 .dark-mode .profile-alert.error {
-  background-color: rgba(127, 29, 29, 0.2);
-  color: #fca5a5;
-  border-color: rgba(252, 165, 165, 0.3);
+  background-color: rgba(31, 94, 55, 0.2);
+  color: #86efac;
+  border-color: rgba(134, 239, 172, 0.3);
 }
 
 .profile-alert.success {
@@ -203,7 +203,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: #667eea;
+  background: #7fc9a8;
   color: white;
   border: none;
   border-radius: 6px;
@@ -214,8 +214,8 @@
 }
 
 .profile-btn-edit:hover:not(:disabled) {
-  background: #5568d3;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  background: #6fdd9d;
+  box-shadow: 0 4px 12px rgba(127, 201, 168, 0.3);
 }
 
 .profile-btn-edit:disabled {
@@ -264,8 +264,8 @@
 
 .form-input:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: #7fc9a8;
+  box-shadow: 0 0 0 3px rgba(127, 201, 168, 0.1);
 }
 
 .form-input:disabled {
@@ -356,13 +356,13 @@
 }
 
 .profile-btn-primary {
-  background: #667eea;
+  background: #7fc9a8;
   color: white;
 }
 
 .profile-btn-primary:hover:not(:disabled) {
-  background: #5568d3;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  background: #6fdd9d;
+  box-shadow: 0 4px 12px rgba(127, 201, 168, 0.3);
 }
 
 .profile-btn-secondary {

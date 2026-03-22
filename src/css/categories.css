@@ -97,37 +97,70 @@
     transform: scale(1.1);
 }
 
-/* Category Color Gradients */
+/* Category Color Gradients - Intentional green shade variations */
 .category-rose-pink .category-icon-wrapper {
-    background: #7fc9a8;
+    background: #6fc299;
 }
 
 .category-blue-cyan .category-icon-wrapper {
-    background: #7fddbb;
+    background: #7fd9b5;
 }
 
 .category-orange-amber .category-icon-wrapper {
-    background: #8fe0c6;
+    background: #8de8c6;
 }
 
 .category-purple-pink .category-icon-wrapper {
-    background: #7fc9a8;
+    background: #5fb08d;
 }
 
 .category-green-emerald .category-icon-wrapper {
-    background: #6fdd9d;
+    background: #9df0d0;
 }
 
 .category-teal-cyan .category-icon-wrapper {
-    background: #7fddbb;
+    background: #74c5a0;
 }
 
 .category-indigo-blue .category-icon-wrapper {
-    background: #95dfc9;
+    background: #a5f5dd;
 }
 
 .category-red-orange .category-icon-wrapper {
-    background: #8fe0c6;
+    background: #65d4a8;
+}
+
+/* Dark mode category colors - Intentional green shade variations */
+.dark .category-rose-pink .category-icon-wrapper {
+    background: #2d8659;
+}
+
+.dark .category-blue-cyan .category-icon-wrapper {
+    background: #3a9968;
+}
+
+.dark .category-orange-amber .category-icon-wrapper {
+    background: #47ad77;
+}
+
+.dark .category-purple-pink .category-icon-wrapper {
+    background: #239949;
+}
+
+.dark .category-green-emerald .category-icon-wrapper {
+    background: #54c987;
+}
+
+.dark .category-teal-cyan .category-icon-wrapper {
+    background: #31866f;
+}
+
+.dark .category-indigo-blue .category-icon-wrapper {
+    background: #6fe09f;
+}
+
+.dark .category-red-orange .category-icon-wrapper {
+    background: #469060;
 }
 
 .category-name {
@@ -147,5 +180,10 @@
 }
 
 .dark .category-button:hover .category-name {
-    color: #7fc9a8;
+    color: #81c784;
+}
+
+.dark .category-button:hover .category-icon-wrapper {
+    filter: brightness(1.2);
+    transform: scale(1.12);
 }

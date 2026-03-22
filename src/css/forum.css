@@ -797,7 +797,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1.2rem;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #7fc9a8 0%, #6fdd9d 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -1043,7 +1043,7 @@
 /* CTA Section */
 .forum-cta-section {
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, #fef2f2 0%, #fdf2f8 100%);
+  background: linear-gradient(135deg, #f0fdf7 0%, #e8fcf1 100%);
   text-align: center;
 }
 

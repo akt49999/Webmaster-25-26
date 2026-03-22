@@ -22,7 +22,7 @@
   width: 48px;
   height: 48px;
   border: 4px solid var(--border-color, #e0e0e0);
-  border-top-color: #667eea;
+  border-top-color: #7fc9a8;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -55,15 +55,15 @@
 }
 
 .admin-alert.error {
-  background-color: #fef2f2;
-  color: #991b1b;
-  border: 1px solid #fecaca;
+  background-color: #f0fdf7;
+  color: #1e3a1f;
+  border: 1px solid #c6f6d5;
 }
 
 .dark-mode .admin-alert.error {
-  background-color: rgba(127, 29, 29, 0.2);
-  color: #fca5a5;
-  border-color: rgba(252, 165, 165, 0.3);
+  background-color: rgba(31, 94, 55, 0.2);
+  color: #86efac;
+  border-color: rgba(134, 239, 172, 0.3);
 }
 
 .admin-alert.success {
@@ -132,13 +132,13 @@
 }
 
 .admin-btn-primary {
-  background: #667eea;
+  background: #7fc9a8;
   color: white;
 }
 
 .admin-btn-primary:hover:not(:disabled) {
-  background: #5568d3;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  background: #6fdd9d;
+  box-shadow: 0 4px 12px rgba(127, 201, 168, 0.3);
 }
 
 .admin-btn-secondary {
@@ -279,8 +279,8 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: #7fc9a8;
+  box-shadow: 0 0 0 3px rgba(127, 201, 168, 0.1);
 }
 
 .form-group input:disabled,

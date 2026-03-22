@@ -36,20 +36,21 @@ export class ErrorBoundary extends React.Component {
           minHeight: '400px',
           padding: '40px 20px',
           textAlign: 'center',
-          backgroundColor: '#fef2f2',
+          backgroundColor: '#f0fdf7',
           borderRadius: '8px',
-          border: '1px solid #fecaca'
+          border: '1px solid #c6f6d5',
+          color: '#22543d'
         }}>
-          <h2 style={{ color: '#991b1b', marginBottom: '12px', fontSize: '24px' }}>
+          <h2 style={{ color: '#1e3a1f', marginBottom: '12px', fontSize: '24px' }}>
             Oops! Something went wrong
           </h2>
-          <p style={{ color: '#7f1d1d', marginBottom: '24px', fontSize: '16px', maxWidth: '500px' }}>
+          <p style={{ color: '#276749', marginBottom: '24px', fontSize: '16px', maxWidth: '500px' }}>
             We encountered an unexpected error. Please try refreshing the page.
           </p>
           <button
             onClick={this.handleReset}
             style={{
-              backgroundColor: '#dc2626',
+              backgroundColor: '#16a34a',
               color: 'white',
               border: 'none',
               padding: '10px 20px',
@@ -59,8 +60,8 @@ export class ErrorBoundary extends React.Component {
               fontWeight: '600',
               transition: 'background-color 0.2s'
             }}
-            onMouseOver={(e) => e.target.style.backgroundColor = '#b91c1c'}
-            onMouseOut={(e) => e.target.style.backgroundColor = '#dc2626'}
+            onMouseOver={(e) => e.target.style.backgroundColor = '#15803d'}
+            onMouseOut={(e) => e.target.style.backgroundColor = '#16a34a'}
           >
             Try Again
           </button>
