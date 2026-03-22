@@ -206,6 +206,10 @@
   gap: 24px !important;
 }
 
+.form-row-contact .form-group {
+  min-width: 0;
+}
+
 @media (max-width: 600px) {
   .form-row-contact {
     grid-template-columns: 1fr;
@@ -227,6 +231,8 @@
 
 .form-group input,
 .form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
   padding: 12px 8px;
   border: 2px solid var(--border-color);
   border-radius: 8px;
