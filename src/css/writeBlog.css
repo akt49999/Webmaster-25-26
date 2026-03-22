@@ -15,7 +15,8 @@
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
-  background: var(--bg-secondary);
+  background: transparent !important;
+  background-color: transparent !important;
   border: 1px solid var(--border-color);
   border-radius: 8px;
   color: var(--text-secondary);
@@ -26,8 +27,15 @@
 }
 
 .write-blog-back-btn:hover {
-  background: var(--bg-tertiary);
+  background: transparent !important;
+  background-color: transparent !important;
   color: var(--text-primary);
+}
+
+.write-blog-back-btn:focus,
+.write-blog-back-btn:active {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .write-blog-header {
@@ -77,6 +85,12 @@
   color: var(--text-primary);
   font-size: 1rem;
   transition: all 0.2s ease;
+}
+
+:root:not(.dark) .write-blog-form-group input,
+:root:not(.dark) .write-blog-form-group select,
+:root:not(.dark) .write-blog-form-group textarea {
+  color: #000000;
 }
 
 .write-blog-form-group input:focus,
@@ -170,14 +184,22 @@
 }
 
 .write-blog-btn-secondary {
-  background: var(--bg-primary);
+  background: transparent !important;
+  background-color: transparent !important;
   color: var(--text-secondary);
   border: 1px solid var(--border-color);
 }
 
 .write-blog-btn-secondary:hover {
-  background: var(--bg-tertiary);
+  background: transparent !important;
+  background-color: transparent !important;
   color: var(--text-primary);
+}
+
+.write-blog-btn-secondary:focus,
+.write-blog-btn-secondary:active {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 /* Auth Required State */
