@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { ArrowRight, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import CursorRippleField from './CursorRippleField';
 import '../css/hero.css';
 
 export default function Hero() {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
+  const heroSectionRef = useRef(null);
 
   const handleExploreClick = () => {
     setIsLoading(true);
@@ -24,7 +26,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="hero-section">
+    <section id="hero" className="hero-section" ref={heroSectionRef}>
       {/* Animated background layers */}
       <div className="hero-background">
         <div className="bg-layer bg-layer-1"></div>
@@ -34,6 +36,7 @@ export default function Hero() {
         <div className="animated-blob blob-1"></div>
         <div className="animated-blob blob-2"></div>
         <div className="animated-blob blob-3"></div>
+        <CursorRippleField containerRef={heroSectionRef} />
       </div>
 
       <div className="hero-content">

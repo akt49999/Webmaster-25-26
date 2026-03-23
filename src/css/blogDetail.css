@@ -129,9 +129,15 @@
   gap: clamp(12px, 2vw, 16px);
 }
 
+.blog-detail-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .blog-detail-action-btn,
 .blog-detail-share-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: clamp(8px, 1vw, 12px) clamp(12px, 2vw, 16px);
@@ -159,6 +165,36 @@
 .blog-detail-share-btn:hover {
   box-shadow: 0 4px 16px var(--btn-shadow);
   transform: translateY(-2px);
+}
+
+.blog-detail-delete-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: clamp(8px, 1vw, 12px) clamp(12px, 2vw, 16px);
+  border: 2px solid #fecaca;
+  background: #fff5f5;
+  color: #b91c1c;
+  border-radius: clamp(8px, 1vw, 12px);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.blog-detail-delete-btn:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.dark .blog-detail-delete-btn {
+  background: rgba(153, 27, 27, 0.22);
+  border-color: rgba(248, 113, 113, 0.42);
+  color: #fca5a5;
+}
+
+.dark .blog-detail-delete-btn:hover {
+  background: rgba(153, 27, 27, 0.35);
 }
 
 /* Article Content */

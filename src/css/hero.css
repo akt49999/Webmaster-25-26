@@ -130,6 +130,30 @@
     text-align: center;
 }
 
+.cursor-ripple-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    overflow: hidden;
+    contain: paint;
+}
+
+.lava-bubble {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    transform: translate3d(0, 0, 0);
+    border-radius: 9999px;
+    background:
+        radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.18) 20%, rgba(127, 201, 168, 0.28) 48%, rgba(127, 201, 168, 0.08) 66%, rgba(127, 201, 168, 0) 78%),
+        radial-gradient(circle, rgba(127, 201, 168, 0.14) 0%, rgba(127, 201, 168, 0) 75%);
+    border: 1px solid rgba(127, 201, 168, 0.22);
+    box-shadow: inset -6px -8px 12px rgba(127, 201, 168, 0.1), 0 6px 14px rgba(127, 201, 168, 0.12);
+    opacity: 0.72;
+    will-change: transform;
+}
+
 /* Hero Icon Animation */
 .hero-icon-container {
     margin-bottom: clamp(16px, 3vw, 24px);
@@ -570,6 +594,21 @@
 
 :root[data-theme='dark'] .scroll-dot::before {
     background: rgba(255, 255, 255, 0.7);
+}
+
+:root[data-theme='dark'] .lava-bubble {
+    background:
+        radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.06) 20%, rgba(168, 220, 197, 0.22) 48%, rgba(168, 220, 197, 0.1) 66%, rgba(168, 220, 197, 0) 78%),
+        radial-gradient(circle, rgba(168, 220, 197, 0.1) 0%, rgba(168, 220, 197, 0) 76%);
+    border-color: rgba(168, 220, 197, 0.24);
+    box-shadow: inset -6px -8px 14px rgba(168, 220, 197, 0.08), 0 8px 18px rgba(5, 9, 18, 0.26);
+    opacity: 0.66;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cursor-ripple-layer {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {

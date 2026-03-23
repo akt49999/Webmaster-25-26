@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Calendar, User, Clock, TrendingUp, Plus, X, Send, Image, FileText } from 'lucide-react';
-import { collection, addDoc, onSnapshot, query, orderBy } from 'firebase/firestore';
+import { Calendar, User, Clock, TrendingUp, Plus, X, Send, Image, FileText, Trash2 } from 'lucide-react';
+import { collection, addDoc, onSnapshot, query, orderBy, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import { useAuth } from '../context/AuthContext';
 import PageHero from '../components/PageHero';
@@ -24,32 +24,6 @@ const categoryImage  = {
 const returnCategoryImage = (category) => {
   return categoryImage[category] || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMzMzMiLz48cmVjdCB4PSIyNSIgeT0iMjUiIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiBmaWxsPSIjNjZkOWVmIiBzdHJva2U9IiMwYjdiYzYiIHN0cm9rZS13aWR0aD0iMyIgcng9IjEwIi8+PHRleHQgeD0iMTAwIiB5PSIxMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjZmZmIiBmb250LWZhbWlseT0iQXJpYWwiPlBsYWNlIjwvdGV4dD48L3N2Zz4=';
 }
-
-// Local storage key for posts
-const BLOG_STORAGE_KEY = 'coppell_blog_posts';
-
-// Helper to get posts from local storage
-const getLocalPosts = () => {
-  try {
-    const stored = localStorage.getItem(BLOG_STORAGE_KEY);
-    if (stored) {
-      const posts = JSON.parse(stored);
-      return posts.map(p => ({ ...p, date: new Date(p.date) }));
-    }
-  } catch {
-    // Error reading local storage
-  }
-  return [];
-};
-
-// Helper to save posts to local storage
-const saveLocalPosts = (posts) => {
-  try {
-    localStorage.setItem(BLOG_STORAGE_KEY, JSON.stringify(posts));
-  } catch {
-    // Error saving to local storage
-  }
-};
 
 const defaultBlogPosts = Array.from({ length: 6 }, (_, i) => ({
   id: `default-${i + 1}`,
@@ -74,6 +48,24 @@ const defaultBlogPosts = Array.from({ length: 6 }, (_, i) => ({
 }));
 
 const categories = ['All', 'Community', 'Volunteering', 'Health', 'Education', 'Business', 'Events'];
+const BLOG_STORAGE_KEY = 'blogPosts';
+
+const getLocalPosts = () => {
+  try {
+    const stored = localStorage.getItem(BLOG_STORAGE_KEY);
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+};
+
+const saveLocalPosts = (posts) => {
+  try {
+    localStorage.setItem(BLOG_STORAGE_KEY, JSON.stringify(posts));
+  } catch {
+    // Ignore local save errors
+  }
+};
 
 export default function Blog() {
   const navigate = useNavigate();
@@ -83,7 +75,7 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('newest');
-  const [blogPosts, setBlogPosts] = useState([...getLocalPosts(), ...defaultBlogPosts]);
+  const [blogPosts, setBlogPosts] = useState(defaultBlogPosts);
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [newPost, setNewPost] = useState({
     title: '',
@@ -94,24 +86,12 @@ export default function Blog() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Load blog posts - try Firebase first, fall back to local storage
+  // Load blog posts from Firebase and merge with defaults
   useEffect(() => {
     let unsubscribe = null;
     
     const loadPosts = async () => {
-      // First, load local posts immediately
-      const localPosts = getLocalPosts();
-      
-      // Create a Map to ensure unique posts by ID
-      const postsMap = new Map();
-      
-      // Add defaults first (lowest priority)
-      defaultBlogPosts.forEach(p => postsMap.set(p.id, p));
-      
-      // Add local posts (higher priority - overwrites defaults)
-      localPosts.forEach(p => postsMap.set(p.id, p));
-      
-      setBlogPosts(Array.from(postsMap.values()));
+      setBlogPosts(defaultBlogPosts);
       
       // Try Firebase - load from global collection (accessible to all users)
       try {
@@ -131,9 +111,6 @@ export default function Blog() {
           
           // Add defaults first (lowest priority)
           defaultBlogPosts.forEach(p => allPostsMap.set(p.id, p));
-          
-          // Add local posts (medium priority)
-          localPosts.forEach(p => allPostsMap.set(p.id, p));
           
           // Add Firebase posts (highest priority - overwrites others)
           firebasePosts.forEach(p => allPostsMap.set(p.id, p));
@@ -179,6 +156,42 @@ export default function Blog() {
 
   const featuredPosts = filteredPosts.filter(post => post.featured);
   const regularPosts = filteredPosts;
+
+  const canDeletePost = (post) => {
+    if (!isAuthenticated || !user) return false;
+    if (post.id?.startsWith('default-')) return false;
+    if (post.authorId && post.authorId === user.uid) return true;
+    if (post.authorEmail && post.authorEmail === user.email) return true;
+    return false;
+  };
+
+  const handleDeletePost = async (post, event) => {
+    event.stopPropagation();
+
+    if (!canDeletePost(post)) {
+      alert('Only the creator can delete this post.');
+      return;
+    }
+
+    const confirmed = window.confirm('Delete this post permanently?');
+    if (!confirmed) return;
+
+    try {
+      if (post.isFirebasePost) {
+        await deleteDoc(doc(db, 'blogPosts', post.id));
+      }
+
+      const localPosts = getLocalPosts();
+      if (localPosts.length > 0) {
+        saveLocalPosts(localPosts.filter((localPost) => localPost.id !== post.id));
+      }
+
+      setBlogPosts((prev) => prev.filter((existingPost) => existingPost.id !== post.id));
+      alert('Post deleted successfully.');
+    } catch {
+      alert('Could not delete post. Please try again.');
+    }
+  };
 
   // Calculate category counts
   const categoryCounts = categories.reduce((acc, cat) => {
@@ -229,10 +242,7 @@ export default function Blog() {
     try {
       const wordCount = newPost.content.split(/\s+/).length;
       const readTime = Math.max(1, Math.ceil(wordCount / 200));
-      const postId = `post-${Date.now()}`;
-
       const postData = {
-        id: postId,
         title: newPost.title.trim(),
         excerpt: newPost.excerpt.trim() || newPost.content.substring(0, 150) + '...',
         content: `<p>${newPost.content.split('\n\n').join('</p><p>')}</p>`,
@@ -248,33 +258,21 @@ export default function Blog() {
         comments: []
       };
 
-      // Try to save to Firebase in global collection
-      let savedToFirebase = false;
-      if (user?.uid) {
-        try {
-          const postsRef = collection(db, 'blogPosts');
-          await addDoc(postsRef, {
-            ...postData,
-            date: new Date() // Firestore will convert this
-          });
-          savedToFirebase = true;
-        } catch {
-          // Firebase save failed, using local storage
-        }
+      if (!user?.uid) {
+        throw new Error('You must be logged in to publish.');
       }
 
-      // Always save to local storage as backup
-      const localPosts = getLocalPosts();
-      saveLocalPosts([postData, ...localPosts]);
-
-      // Update UI immediately
-      setBlogPosts(prev => [postData, ...prev]);
+      const postsRef = collection(db, 'blogPosts');
+      await addDoc(postsRef, {
+        ...postData,
+        date: new Date()
+      });
       
       setNewPost({ title: '', excerpt: '', content: '', category: 'Community', imageUrl: '' });
       setShowCreateModal(false);
-      alert(savedToFirebase ? 'Blog post published successfully!' : 'Blog post saved locally!');
+      alert('Blog post published successfully!');
     } catch {
-      alert('Error creating post. Please try again.');
+      alert('Error publishing to Firebase. Please check your login/permissions and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -355,6 +353,17 @@ export default function Blog() {
                         <Clock size={14} />
                         <span>{post.readTime}</span>
                       </div>
+                      {canDeletePost(post) && (
+                        <button
+                          type="button"
+                          className="blog-delete-btn"
+                          onClick={(event) => handleDeletePost(post, event)}
+                          aria-label="Delete post"
+                        >
+                          <Trash2 size={14} />
+                          Delete
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -407,6 +416,17 @@ export default function Blog() {
                         <Clock size={12} />
                         <span>{post.readTime}</span>
                       </div>
+                      {canDeletePost(post) && (
+                        <button
+                          type="button"
+                          className="blog-delete-btn"
+                          onClick={(event) => handleDeletePost(post, event)}
+                          aria-label="Delete post"
+                        >
+                          <Trash2 size={14} />
+                          Delete
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -88,6 +88,7 @@
 
 .events-scroll-wrapper {
     position: relative;
+    overscroll-behavior: contain;
 }
 
 .events-scroll-container {
@@ -99,6 +100,7 @@
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    touch-action: pan-x;
 }
 
 .events-scroll-container::-webkit-scrollbar {

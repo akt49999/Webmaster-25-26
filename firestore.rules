@@ -1,0 +1,127 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    match /users/{userId} {
+      allow read, create, update, delete: if isOwner(userId);
+    }
+
+    match /resources/{resourceId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /blogPosts/{postId} {
+      allow read: if true;
+
+      allow create: if isAuthenticated() &&
+        request.resource.data.title is string &&
+        request.resource.data.content is string &&
+        request.resource.data.author is string &&
+        request.resource.data.authorId is string &&
+        request.resource.data.category is string &&
+        request.resource.data.date is timestamp &&
+        request.resource.data.title.size() > 0 &&
+        request.resource.data.title.size() <= 300 &&
+        request.resource.data.content.size() > 10 &&
+        request.resource.data.content.size() <= 50000;
+
+      allow update: if isAuthenticated() && (
+        isOwner(resource.data.authorId) ||
+        request.resource.data.diff(resource.data).changedKeys().hasOnly(['likes', 'comments'])
+      );
+
+      allow delete: if isOwner(resource.data.authorId);
+
+      match /comments/{commentId} {
+        allow read: if true;
+        allow create: if isAuthenticated() &&
+          request.resource.data.content is string &&
+          request.resource.data.timestamp is timestamp &&
+          request.resource.data.content.size() > 0 &&
+          request.resource.data.content.size() <= 2000;
+        allow delete: if isOwner(resource.data.uid);
+      }
+    }
+
+    match /forumTopics/{topicId} {
+      allow read: if true;
+
+      allow create: if isAuthenticated() &&
+        request.resource.data.title is string &&
+        request.resource.data.content is string &&
+        request.resource.data.category is string &&
+        request.resource.data.authorId is string &&
+        request.resource.data.timestamp is timestamp &&
+        request.resource.data.title.size() > 0 &&
+        request.resource.data.title.size() <= 300 &&
+        request.resource.data.content.size() >= 10 &&
+        request.resource.data.content.size() <= 10000;
+
+      allow update: if isAuthenticated() && (
+        isOwner(resource.data.authorId) ||
+        request.resource.data.diff(resource.data).changedKeys().hasOnly(['likes', 'views', 'replies', 'isResolved', 'trending'])
+      );
+
+      allow delete: if isOwner(resource.data.authorId);
+
+      match /replies/{replyId} {
+        allow read: if true;
+        allow create: if isAuthenticated() &&
+          request.resource.data.content is string &&
+          request.resource.data.timestamp is timestamp &&
+          request.resource.data.content.size() >= 1 &&
+          request.resource.data.content.size() <= 5000;
+        allow update, delete: if isOwner(resource.data.uid);
+      }
+    }
+
+    match /submissions/{submissionId} {
+      allow create: if isAuthenticated() &&
+        request.resource.data.firstName is string &&
+        request.resource.data.lastName is string &&
+        request.resource.data.resourceName is string &&
+        request.resource.data.website is string &&
+        request.resource.data.category is string &&
+        request.resource.data.description is string &&
+        request.resource.data.timestamp is timestamp &&
+        request.resource.data.firstName.size() > 0 &&
+        request.resource.data.firstName.size() <= 100 &&
+        request.resource.data.lastName.size() > 0 &&
+        request.resource.data.lastName.size() <= 100 &&
+        request.resource.data.resourceName.size() > 0 &&
+        request.resource.data.resourceName.size() <= 200 &&
+        request.resource.data.website.size() <= 500 &&
+        request.resource.data.category.size() > 0 &&
+        request.resource.data.category.size() <= 100 &&
+        request.resource.data.description.size() >= 10 &&
+        request.resource.data.description.size() <= 5000;
+      allow read, update, delete: if false;
+    }
+
+    match /contactSubmissions/{submissionId} {
+      allow create: if
+        request.resource.data.name is string &&
+        request.resource.data.email is string &&
+        request.resource.data.phone is string &&
+        request.resource.data.subject is string &&
+        request.resource.data.message is string &&
+        request.resource.data.timestamp is timestamp;
+
+      allow read, update, delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

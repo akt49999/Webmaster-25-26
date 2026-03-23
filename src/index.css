@@ -15,6 +15,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* page layout: stack sections vertically and reserve space for the fixed navbar */
 body {
   margin: 0;

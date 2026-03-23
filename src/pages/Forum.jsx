@@ -5,10 +5,10 @@ import {
   Users, Plus, Search, Filter, Pin,
   MessageCircle, Heart, Share2, Bookmark, BookmarkCheck,
   CheckCircle, AlertCircle, HelpCircle, Lightbulb,
-  ChevronRight, Send, X, BarChart3, Vote
+  ChevronRight, Send, X, BarChart3, Vote, Trash2
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import { collection, addDoc, query, orderBy, onSnapshot } from 'firebase/firestore';
+import { collection, addDoc, query, orderBy, onSnapshot, deleteDoc, doc } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import PageHero from '../components/PageHero';
 import '../css/forum.css';
@@ -306,6 +306,46 @@ export default function Forum() {
   };
 
   const categoryCounts = getCategoryCounts();
+
+  const canDeleteTopic = (topic) => {
+    if (!isAuthenticated || !user) return false;
+    if (topic.id?.startsWith('default-')) return false;
+    if (topic.authorId && topic.authorId === user.uid) return true;
+    if (topic.authorEmail && topic.authorEmail === user.email) return true;
+    return false;
+  };
+
+  const handleDeleteTopic = async (topic, event) => {
+    event.stopPropagation();
+
+    if (!canDeleteTopic(topic)) {
+      alert('Only the creator can delete this topic.');
+      return;
+    }
+
+    const confirmed = window.confirm('Delete this topic permanently?');
+    if (!confirmed) return;
+
+    try {
+      if (topic.isFirebaseTopic) {
+        await deleteDoc(doc(db, 'forumTopics', topic.id));
+      }
+
+      const localTopics = getLocalTopics();
+      saveLocalTopics(localTopics.filter((localTopic) => localTopic.id !== topic.id));
+
+      setTopics((prev) => prev.filter((currentTopic) => currentTopic.id !== topic.id));
+      setBookmarkedTopics((prev) => {
+        const updated = prev.filter((topicId) => topicId !== topic.id);
+        saveBookmarks(updated);
+        return updated;
+      });
+
+      alert('Topic deleted successfully.');
+    } catch {
+      alert('Could not delete topic. Please try again.');
+    }
+  };
 
   const filteredTopics = topics.filter(topic => {
     const matchesCategory = selectedCategory === 'All Topics' || topic.category === selectedCategory;
@@ -712,6 +752,15 @@ export default function Forum() {
                           >
                             {bookmarkedTopics.includes(topic.id) ? <BookmarkCheck size={16} /> : <Bookmark size={16} />}
                           </button>
+                          {canDeleteTopic(topic) && (
+                            <button
+                              className="forum-action-btn delete"
+                              onClick={(e) => handleDeleteTopic(topic, e)}
+                              aria-label="Delete topic"
+                            >
+                              <Trash2 size={16} />
+                            </button>
+                          )}
                           <button className="forum-action-btn" onClick={(e) => e.stopPropagation()}>
                             <Share2 size={16} />
                           </button>

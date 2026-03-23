@@ -1,31 +1,45 @@
-.ticker{
-  padding: 10px;
-  border: 1px solid #81c784;
-  
+.ticker {
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-secondary);
 }
 
-.ticker-item{
-  display: inline-block;
-  margin-right: 160px;
-  font-size: 20px;
-  font-family: "Segoe UI",Arial,sans-serif;
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--accent-orange);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.ticker-item::after {
+  content: "";
+  margin-left: 0;
+}
+
+.ticker-item:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-orange);
+}
+
+.dark .ticker {
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dark .ticker-item {
   color: #81c784;
-}
-
-.ticker-item:after{
-  content: "•";
-  margin-left: 40px;
-
-  opacity: 0.5;
-}
-
-.dark .ticker{
-  background: #121212;
-  border: 1px solid #81c784;
-}
-
-.dark .ticker-item{
-  color: #81c784;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
 }
 
 

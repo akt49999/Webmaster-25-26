@@ -7,7 +7,7 @@ import {
   Heart, Reply
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import { doc, onSnapshot } from 'firebase/firestore';
+import { doc, onSnapshot, deleteDoc } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import '../css/forumTopicDetail.css';
 
@@ -23,6 +23,14 @@ const getLocalTopics = () => {
     return stored ? JSON.parse(stored).map(t => ({ ...t, timestamp: new Date(t.timestamp) })) : [];
   } catch {
     return [];
+  }
+};
+
+const saveLocalTopics = (topics) => {
+  try {
+    localStorage.setItem(TOPICS_STORAGE_KEY, JSON.stringify(topics));
+  } catch {
+    // Error saving topics
   }
 };
 
@@ -352,6 +360,37 @@ export default function ForumTopicDetail() {
     }
   };
 
+  const canDeleteTopic =
+    isAuthenticated &&
+    !!user &&
+    !id.startsWith('default-') &&
+    ((topic?.authorId && topic.authorId === user.uid) ||
+      (topic?.authorEmail && topic.authorEmail === user.email));
+
+  const handleDeleteTopic = async () => {
+    if (!canDeleteTopic) {
+      alert('Only the creator can delete this topic.');
+      return;
+    }
+
+    const confirmed = window.confirm('Delete this topic permanently?');
+    if (!confirmed) return;
+
+    try {
+      if (!id.startsWith('topic-')) {
+        await deleteDoc(doc(db, 'forumTopics', id));
+      }
+
+      const localTopics = getLocalTopics();
+      saveLocalTopics(localTopics.filter((localTopic) => localTopic.id !== id));
+
+      alert('Topic deleted successfully.');
+      navigate('/forum');
+    } catch {
+      alert('Could not delete topic. Please try again.');
+    }
+  };
+
   const handleSubmitReply = async (e) => {
     e.preventDefault();
     if (!newReply.trim()) return;
@@ -543,6 +582,15 @@ export default function ForumTopicDetail() {
             >
               {isBookmarked ? <BookmarkCheck size={18} /> : <Bookmark size={18} />}
             </button>
+            {canDeleteTopic && (
+              <button
+                className="forum-topic-action-btn delete"
+                onClick={handleDeleteTopic}
+                title="Delete topic"
+              >
+                <Trash2 size={18} />
+              </button>
+            )}
             <button className="forum-topic-action-btn" onClick={handleShare} title="Share">
               <Share2 size={18} />
             </button>

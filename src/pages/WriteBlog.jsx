@@ -8,24 +8,6 @@ import '../css/writeBlog.css';
 
 const categories = ['Community', 'Events', 'Education', 'Health', 'Business', 'Volunteering', 'Sports', 'Arts', 'Technology', 'Environment'];
 
-// Local storage functions
-const getLocalPosts = () => {
-  try {
-    const stored = localStorage.getItem('blogPosts');
-    return stored ? JSON.parse(stored) : [];
-  } catch {
-    return [];
-  }
-};
-
-const saveLocalPosts = (posts) => {
-  try {
-    localStorage.setItem('blogPosts', JSON.stringify(posts));
-  } catch {
-    // Error saving to local storage
-  }
-};
-
 export default function WriteBlog() {
   const navigate = useNavigate();
   const { user, isAuthenticated } = useAuth();
@@ -71,7 +53,6 @@ export default function WriteBlog() {
     try {
       const wordCount = newPost.content.split(/\s+/).length;
       const readTime = Math.max(1, Math.ceil(wordCount / 200));
-      const localPostId = `post-${Date.now()}`; // Fallback ID for local storage only
 
       const postData = {
         title: newPost.title.trim(),
@@ -89,36 +70,20 @@ export default function WriteBlog() {
         comments: []
       };
 
-      // Try to save to Firebase in global collection
-      let savedToFirebase = false;
-      let firebaseDocId = null;
-      
-      if (user?.uid) {
-        try {
-          const postsRef = collection(db, 'blogPosts');
-          const docRef = await addDoc(postsRef, {
-            ...postData,
-            date: new Date()
-          });
-          savedToFirebase = true;
-          firebaseDocId = docRef.id; // Use Firebase-generated document ID
-        } catch {
-          // Firebase save failed, using local storage
-        }
+      if (!user?.uid) {
+        throw new Error('You must be logged in to publish.');
       }
 
-      // Save to local storage as backup (with local ID)
-      const localPosts = getLocalPosts();
-      const localPostData = { ...postData, id: firebaseDocId || localPostId };
-      saveLocalPosts([localPostData, ...localPosts]);
+      const postsRef = collection(db, 'blogPosts');
+      const docRef = await addDoc(postsRef, {
+        ...postData,
+        date: new Date()
+      });
 
-      alert(savedToFirebase ? 'Blog post published successfully!' : 'Blog post saved locally!');
-      
-      // Navigate using Firebase doc ID if available, otherwise use local ID
-      navigate(`/blog/${firebaseDocId || localPostId}`);
+      alert('Blog post published successfully!');
+      navigate(`/blog/${docRef.id}`);
     } catch {
-      // Error creating post
-      alert('Error creating post. Please try again.');
+      alert('Error publishing to Firebase. Please check your login/permissions and try again.');
     } finally {
       setIsSubmitting(false);
     }

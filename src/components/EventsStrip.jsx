@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import '../css/events.css';
@@ -13,10 +13,71 @@ const events = [
 
 export default function EventsStrip() {
   const navigate = useNavigate();
+  const scrollWrapperRef = useRef(null);
+  const scrollContainerRef = useRef(null);
+  const previousBodyOverflowRef = useRef('');
+  const previousHtmlOverflowRef = useRef('');
+
+  useEffect(() => {
+    const wrapper = scrollWrapperRef.current;
+    const container = scrollContainerRef.current;
+
+    if (!wrapper || !container) {
+      return undefined;
+    }
+
+    const wheelInterceptor = (event) => {
+      const canScrollHorizontally = container.scrollWidth > container.clientWidth;
+      if (!canScrollHorizontally) {
+        return;
+      }
+
+      const delta = Math.abs(event.deltaY) > Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
+      if (delta === 0) {
+        return;
+      }
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      container.scrollBy({
+        left: delta,
+        behavior: 'smooth',
+      });
+    };
+
+    wrapper.addEventListener('wheel', wheelInterceptor, { passive: false });
+
+    return () => {
+      wrapper.removeEventListener('wheel', wheelInterceptor);
+      document.body.style.overflowY = previousBodyOverflowRef.current;
+      document.documentElement.style.overflowY = previousHtmlOverflowRef.current;
+    };
+  }, []);
 
   const handleViewAll = () => {
     navigate('/events');
   };
+
+  const handleScrollAreaEnter = () => {
+    if (!window.matchMedia('(pointer: fine)').matches) {
+      return;
+    }
+
+    if (previousBodyOverflowRef.current === '') {
+      previousBodyOverflowRef.current = document.body.style.overflowY;
+      previousHtmlOverflowRef.current = document.documentElement.style.overflowY;
+    }
+
+    document.body.style.overflowY = 'hidden';
+    document.documentElement.style.overflowY = 'hidden';
+  };
+
+  const handleScrollAreaLeave = () => {
+    document.body.style.overflowY = previousBodyOverflowRef.current;
+    document.documentElement.style.overflowY = previousHtmlOverflowRef.current;
+  };
+
   return (
     <section id="events" className="events-section">
       <div className="events-container">
@@ -28,8 +89,16 @@ export default function EventsStrip() {
           <button className="view-all-btn" onClick={handleViewAll}>View All</button>
         </div>
 
-        <div className="events-scroll-wrapper">
-          <div className="events-scroll-container">
+        <div
+          ref={scrollWrapperRef}
+          className="events-scroll-wrapper"
+          onMouseEnter={handleScrollAreaEnter}
+          onMouseLeave={handleScrollAreaLeave}
+        >
+          <div
+            ref={scrollContainerRef}
+            className="events-scroll-container"
+          >
             {events.map((event) => (
               <div key={event.id} className="event-card">
                 <div className="event-content">

@@ -753,12 +753,30 @@
   color: #f59e0b;
 }
 
+.forum-action-btn.delete {
+  color: #dc2626;
+}
+
+.forum-action-btn.delete:hover {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
 .dark .forum-action-btn:hover {
   background: rgba(129, 199, 132, 0.15);
 }
 
 .dark .forum-action-btn.bookmarked {
   color: #fbbf24;
+}
+
+.dark .forum-action-btn.delete {
+  color: #fca5a5;
+}
+
+.dark .forum-action-btn.delete:hover {
+  background: rgba(153, 27, 27, 0.35);
+  color: #fecaca;
 }
 
 .forum-chevron {

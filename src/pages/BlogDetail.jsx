@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Calendar, User, Clock, ArrowLeft, Share2, Heart, MessageCircle, Send } from 'lucide-react';
-import { doc, updateDoc, arrayUnion, onSnapshot } from 'firebase/firestore';
+import { Calendar, User, Clock, ArrowLeft, Share2, Heart, MessageCircle, Send, Trash2 } from 'lucide-react';
+import { doc, updateDoc, arrayUnion, onSnapshot, deleteDoc } from 'firebase/firestore';
 import DOMPurify from 'dompurify';
 import { db } from '../config/firebase';
 import { useAuth } from '../context/AuthContext';
@@ -19,6 +19,8 @@ const categoryImage = {
 const returnCategoryImage = (category) => {
   return categoryImage[category] || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiMzMzMzMzMiLz48cmVjdCB4PSIyNSIgeT0iMjUiIHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiBmaWxsPSIjNjZkOWVmIiBzdHJva2U9IiMwYjdiYzYiIHN0cm9rZS13aWR0aD0iMyIgcng9IjEwIi8+PHRleHQgeD0iMTAwIiB5PSIxMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjZmZmIiBmb250LWZhbWlseT0iQXJpYWwiPlBsYWNlIjwvdGV4dD48L3N2Zz4=';
 };
+
+const BLOG_STORAGE_KEY = 'blogPosts';
 
 const defaultBlogPosts = Array.from({ length: 6 }, (_, i) => ({
   id: `default-${i + 1}`,
@@ -57,10 +59,18 @@ export default function BlogDetail() {
   // Helper function to get posts from local storage
   const getLocalPosts = () => {
     try {
-      const stored = localStorage.getItem('blogPosts');
+      const stored = localStorage.getItem(BLOG_STORAGE_KEY);
       return stored ? JSON.parse(stored) : [];
     } catch {
       return [];
+    }
+  };
+
+  const saveLocalPosts = (posts) => {
+    try {
+      localStorage.setItem(BLOG_STORAGE_KEY, JSON.stringify(posts));
+    } catch {
+      // Ignore local save errors
     }
   };
 
@@ -261,6 +271,39 @@ export default function BlogDetail() {
     }
   };
 
+  const canDeletePost =
+    isAuthenticated &&
+    !!user &&
+    !id.startsWith('default-') &&
+    ((post?.authorId && post.authorId === user.uid) ||
+      (post?.authorEmail && post.authorEmail === user.email));
+
+  const handleDeletePost = async () => {
+    if (!canDeletePost) {
+      alert('Only the creator can delete this post.');
+      return;
+    }
+
+    const confirmed = window.confirm('Delete this post permanently?');
+    if (!confirmed) return;
+
+    try {
+      if (!id.startsWith('post-')) {
+        await deleteDoc(doc(db, 'blogPosts', id));
+      }
+
+      const localPosts = getLocalPosts();
+      if (localPosts.length > 0) {
+        saveLocalPosts(localPosts.filter((localPost) => localPost.id !== id));
+      }
+
+      alert('Post deleted successfully.');
+      navigate('/blog');
+    } catch {
+      alert('Could not delete post. Please try again.');
+    }
+  };
+
   if (loading) {
     return (
       <div className="blog-detail-loading">
@@ -340,10 +383,18 @@ export default function BlogDetail() {
               <span>{comments.length}</span>
             </button>
           </div>
-          <button className="blog-detail-share-btn" onClick={handleShare}>
-            <Share2 size={18} />
-            Share
-          </button>
+          <div className="blog-detail-actions-right">
+            {canDeletePost && (
+              <button className="blog-detail-delete-btn" onClick={handleDeletePost}>
+                <Trash2 size={18} />
+                Delete
+              </button>
+            )}
+            <button className="blog-detail-share-btn" onClick={handleShare}>
+              <Share2 size={18} />
+              Share
+            </button>
+          </div>
         </div>
 
         {/* Article Content */}

@@ -17,6 +17,13 @@ dist-ssr
 .env.local
 .env.production
 .env.production.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.*.local
+*.env
+!.env.example
 api_keys.env
 
 # Editor directories and files
@@ -32,10 +39,25 @@ api_keys.env
 
 # Firebase
 serviceAccountKey.json
+*serviceAccount*.json
 .firebase/
 firebase-debug.log
 firestore-debug.log
 ui-debug.log
 
+# Secrets / keys
+*.pem
+*.p12
+*.key
+*.crt
+secrets*.json
+
 # Build outputs
 build/
+coverage/
+.cache/
+.vite/
+
+# OS files
+Thumbs.db
+Desktop.ini

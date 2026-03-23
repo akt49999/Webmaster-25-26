@@ -320,6 +320,14 @@
   color: #f59e0b;
 }
 
+.forum-topic-action-btn.delete {
+  color: #dc2626;
+}
+
+.forum-topic-action-btn.delete:hover {
+  color: #b91c1c;
+}
+
 .dark .forum-topic-action-btn,
 .dark .forum-topic-stat {
   color: #94a3b8;
@@ -335,6 +343,14 @@
 
 .dark .forum-topic-action-btn:hover {
   color: #f472b6;
+}
+
+.dark .forum-topic-action-btn.delete {
+  color: #fca5a5;
+}
+
+.dark .forum-topic-action-btn.delete:hover {
+  color: #fecaca;
 }
 
 .forum-topic-action-buttons {
