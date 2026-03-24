@@ -796,6 +796,20 @@
   margin-bottom: 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .blog-actions-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .blog-actions-bar .search-wrapper {
+    width: calc(100% - 40px);
+    max-width: 600px; 
+    margin: 0 80px 0.5rem 20px;
+  }
+}
+
 .blog-create-btn {
   display: flex;
   align-items: center;
